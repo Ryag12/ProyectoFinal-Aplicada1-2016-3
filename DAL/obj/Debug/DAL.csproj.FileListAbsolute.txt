@@ -1,0 +1,12 @@
+C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Aplicada1-ProyectoFinal\ProyectoFinal-Aplicada1\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Aplicada1-ProyectoFinal\ProyectoFinal-Aplicada1\DAL\bin\Debug\DAL.dll.config
+C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Aplicada1-ProyectoFinal\ProyectoFinal-Aplicada1\DAL\bin\Debug\DAL.dll
+C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Aplicada1-ProyectoFinal\ProyectoFinal-Aplicada1\DAL\bin\Debug\DAL.pdb
+C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Aplicada1-ProyectoFinal\ProyectoFinal-Aplicada1\DAL\bin\Debug\Entidades.dll
+C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Aplicada1-ProyectoFinal\ProyectoFinal-Aplicada1\DAL\bin\Debug\EntityFramework.dll
+C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Aplicada1-ProyectoFinal\ProyectoFinal-Aplicada1\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Aplicada1-ProyectoFinal\ProyectoFinal-Aplicada1\DAL\bin\Debug\Entidades.pdb
+C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Aplicada1-ProyectoFinal\ProyectoFinal-Aplicada1\DAL\bin\Debug\EntityFramework.xml
+C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Aplicada1-ProyectoFinal\ProyectoFinal-Aplicada1\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Aplicada1-ProyectoFinal\ProyectoFinal-Aplicada1\DAL\obj\Debug\DAL.dll
+C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Aplicada1-ProyectoFinal\ProyectoFinal-Aplicada1\DAL\obj\Debug\DAL.pdb
