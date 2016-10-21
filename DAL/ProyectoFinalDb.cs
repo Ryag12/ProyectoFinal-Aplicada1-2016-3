@@ -9,11 +9,11 @@ namespace DAL
 {
      public class ProyectoFinalDb : DbContext
     {
-        public ProyectoFinalDb() : base("name=ConStr")
+        public ProyectoFinalDb() : base("name = ConStr")
         {
 
         }
-        public DbSet<Vendedores> Vendedor { get; set; }
+        public DbSet<Vendedor> Vendedor { get; set; }
 
     }
 }

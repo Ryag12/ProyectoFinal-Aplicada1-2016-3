@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroVendedor));
             this.panel1 = new System.Windows.Forms.Panel();
             this.TipoVehiculo2comboBox = new System.Windows.Forms.ComboBox();
@@ -64,8 +65,34 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Editarbutton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider7 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider9 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider10 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider11 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider12 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider13 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider13)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -414,7 +441,7 @@
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.Location = new System.Drawing.Point(30, 666);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(83, 85);
+            this.Guardarbutton.Size = new System.Drawing.Size(140, 85);
             this.Guardarbutton.TabIndex = 12;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.button2_Click);
@@ -424,18 +451,70 @@
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.Location = new System.Drawing.Point(732, 669);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(91, 85);
+            this.Eliminarbutton.Size = new System.Drawing.Size(158, 85);
             this.Eliminarbutton.TabIndex = 13;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
             // 
             // Editarbutton
             // 
             this.Editarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Editarbutton.Image")));
-            this.Editarbutton.Location = new System.Drawing.Point(409, 669);
+            this.Editarbutton.Location = new System.Drawing.Point(409, 666);
             this.Editarbutton.Name = "Editarbutton";
-            this.Editarbutton.Size = new System.Drawing.Size(88, 85);
+            this.Editarbutton.Size = new System.Drawing.Size(135, 88);
             this.Editarbutton.TabIndex = 14;
             this.Editarbutton.UseVisualStyleBackColor = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.ContainerControl = this;
+            // 
+            // errorProvider5
+            // 
+            this.errorProvider5.ContainerControl = this;
+            // 
+            // errorProvider6
+            // 
+            this.errorProvider6.ContainerControl = this;
+            // 
+            // errorProvider7
+            // 
+            this.errorProvider7.ContainerControl = this;
+            // 
+            // errorProvider8
+            // 
+            this.errorProvider8.ContainerControl = this;
+            // 
+            // errorProvider9
+            // 
+            this.errorProvider9.ContainerControl = this;
+            // 
+            // errorProvider10
+            // 
+            this.errorProvider10.ContainerControl = this;
+            // 
+            // errorProvider11
+            // 
+            this.errorProvider11.ContainerControl = this;
+            // 
+            // errorProvider12
+            // 
+            this.errorProvider12.ContainerControl = this;
+            // 
+            // errorProvider13
+            // 
+            this.errorProvider13.ContainerControl = this;
             // 
             // RegistroVendedor
             // 
@@ -451,6 +530,19 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider13)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -492,5 +584,18 @@
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Editarbutton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
+        private System.Windows.Forms.ErrorProvider errorProvider5;
+        private System.Windows.Forms.ErrorProvider errorProvider6;
+        private System.Windows.Forms.ErrorProvider errorProvider7;
+        private System.Windows.Forms.ErrorProvider errorProvider8;
+        private System.Windows.Forms.ErrorProvider errorProvider9;
+        private System.Windows.Forms.ErrorProvider errorProvider10;
+        private System.Windows.Forms.ErrorProvider errorProvider11;
+        private System.Windows.Forms.ErrorProvider errorProvider12;
+        private System.Windows.Forms.ErrorProvider errorProvider13;
     }
 }

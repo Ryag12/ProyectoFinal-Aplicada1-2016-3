@@ -15,5 +15,10 @@ namespace ProyectoFinal_Aplicada1.Consultar
         {
             InitializeComponent();
         }
+
+        private void ConsultaVendedores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

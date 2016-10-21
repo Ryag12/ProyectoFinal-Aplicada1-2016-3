@@ -8,7 +8,7 @@ namespace BLL
 {
     public class VendedorBLL
     {
-        public static bool Guardar(Vendedores vendedor)
+        public static bool Guardar(Vendedor vendedor)
         {
             bool retorno = false;
             try
@@ -34,22 +34,22 @@ namespace BLL
         {
             var db = new ProyectoFinalDb();
 
-            Vendedores vendedor = Buscar(id);
+            Vendedor vendedor = Buscar(id);
 
             db.Vendedor.Remove(vendedor);
             db.SaveChanges();
         }
 
-        public static Vendedores Buscar(int id)
+        public static Vendedor Buscar(int id)
         {
             var db = new ProyectoFinalDb();
 
             return db.Vendedor.Find(id);
         }
 
-        public static List<Vendedores> GetLista()
+        public static List<Vendedor> GetLista()
         {
-            List<Vendedores> lista = new List<Vendedores>();
+            List<Vendedor> lista = new List<Vendedor>();
 
             var db = new ProyectoFinalDb();
 
@@ -58,9 +58,9 @@ namespace BLL
             return lista;
         }
 
-        public static List<Vendedores> GetLista(int vendedorId)
+        public static List<Vendedor> GetLista(int vendedorId)
         {
-            List<Vendedores> lista = new List<Vendedores>();
+            List<Vendedor> lista = new List<Vendedor>();
 
             var db = new ProyectoFinalDb();
 
