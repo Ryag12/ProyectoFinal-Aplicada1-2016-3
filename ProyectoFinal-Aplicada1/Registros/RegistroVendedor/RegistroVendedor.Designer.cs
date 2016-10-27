@@ -97,7 +97,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.TipoVehiculo2comboBox);
             this.panel1.Controls.Add(this.label15);
@@ -131,6 +131,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1050, 651);
@@ -165,13 +166,13 @@
             // 
             this.VehiculoAsignadocomboBox.FormattingEnabled = true;
             this.VehiculoAsignadocomboBox.Items.AddRange(new object[] {
-            "Eliges....",
             "Si",
             "No"});
             this.VehiculoAsignadocomboBox.Location = new System.Drawing.Point(3, 593);
             this.VehiculoAsignadocomboBox.Name = "VehiculoAsignadocomboBox";
             this.VehiculoAsignadocomboBox.Size = new System.Drawing.Size(129, 31);
             this.VehiculoAsignadocomboBox.TabIndex = 30;
+            this.VehiculoAsignadocomboBox.Text = "Eliges....";
             // 
             // label14
             // 
@@ -256,13 +257,14 @@
             // 
             this.VehiculoPropiocomboBox.FormattingEnabled = true;
             this.VehiculoPropiocomboBox.Items.AddRange(new object[] {
-            "Eliges....",
             "Si",
             "No"});
             this.VehiculoPropiocomboBox.Location = new System.Drawing.Point(3, 497);
             this.VehiculoPropiocomboBox.Name = "VehiculoPropiocomboBox";
             this.VehiculoPropiocomboBox.Size = new System.Drawing.Size(129, 31);
             this.VehiculoPropiocomboBox.TabIndex = 21;
+            this.VehiculoPropiocomboBox.Text = "Eliges....";
+            this.VehiculoPropiocomboBox.SelectedIndexChanged += new System.EventHandler(this.VehiculoPropiocomboBox_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -292,23 +294,29 @@
             // CedulamaskedTextBox
             // 
             this.CedulamaskedTextBox.Location = new System.Drawing.Point(426, 194);
+            this.CedulamaskedTextBox.Mask = "999-9999999-9";
             this.CedulamaskedTextBox.Name = "CedulamaskedTextBox";
             this.CedulamaskedTextBox.Size = new System.Drawing.Size(308, 30);
             this.CedulamaskedTextBox.TabIndex = 17;
+            this.CedulamaskedTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CedulamaskedTextBox_KeyPress);
             // 
             // TelefonoMovilmaskedTextBox
             // 
             this.TelefonoMovilmaskedTextBox.Location = new System.Drawing.Point(426, 283);
+            this.TelefonoMovilmaskedTextBox.Mask = "000-000-0000";
             this.TelefonoMovilmaskedTextBox.Name = "TelefonoMovilmaskedTextBox";
             this.TelefonoMovilmaskedTextBox.Size = new System.Drawing.Size(308, 30);
             this.TelefonoMovilmaskedTextBox.TabIndex = 16;
+            this.TelefonoMovilmaskedTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TelefonoMovilmaskedTextBox_KeyPress);
             // 
             // TelefonoFijomaskedTextBox
             // 
             this.TelefonoFijomaskedTextBox.Location = new System.Drawing.Point(3, 283);
+            this.TelefonoFijomaskedTextBox.Mask = "(999)000-0000";
             this.TelefonoFijomaskedTextBox.Name = "TelefonoFijomaskedTextBox";
             this.TelefonoFijomaskedTextBox.Size = new System.Drawing.Size(308, 30);
             this.TelefonoFijomaskedTextBox.TabIndex = 15;
+            this.TelefonoFijomaskedTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TelefonoFijomaskedTextBox_KeyPress);
             // 
             // SexocomboBox
             // 
@@ -329,6 +337,7 @@
             this.VendedorIdtextBox.Name = "VendedorIdtextBox";
             this.VendedorIdtextBox.Size = new System.Drawing.Size(45, 26);
             this.VendedorIdtextBox.TabIndex = 12;
+            this.VendedorIdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.VendedorIdtextBox_KeyPress);
             // 
             // ApellidotextBox
             // 
@@ -336,6 +345,7 @@
             this.ApellidotextBox.Name = "ApellidotextBox";
             this.ApellidotextBox.Size = new System.Drawing.Size(308, 30);
             this.ApellidotextBox.TabIndex = 11;
+            this.ApellidotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ApellidotextBox_KeyPress);
             // 
             // NombretextBox
             // 
@@ -344,6 +354,7 @@
             this.NombretextBox.Size = new System.Drawing.Size(308, 30);
             this.NombretextBox.TabIndex = 10;
             this.NombretextBox.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
+            this.NombretextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombretextBox_KeyPress);
             // 
             // label1
             // 
@@ -437,32 +448,47 @@
             // 
             // Guardarbutton
             // 
+            this.Guardarbutton.BackColor = System.Drawing.Color.Transparent;
             this.Guardarbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Guardarbutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
-            this.Guardarbutton.Location = new System.Drawing.Point(30, 666);
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Guardarbutton.Location = new System.Drawing.Point(58, 682);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(140, 85);
+            this.Guardarbutton.Size = new System.Drawing.Size(205, 72);
             this.Guardarbutton.TabIndex = 12;
-            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Guardarbutton.UseVisualStyleBackColor = false;
             this.Guardarbutton.Click += new System.EventHandler(this.button2_Click);
             // 
             // Eliminarbutton
             // 
+            this.Eliminarbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Eliminarbutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
-            this.Eliminarbutton.Location = new System.Drawing.Point(732, 669);
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Eliminarbutton.Location = new System.Drawing.Point(743, 686);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(158, 85);
+            this.Eliminarbutton.Size = new System.Drawing.Size(218, 72);
             this.Eliminarbutton.TabIndex = 13;
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Eliminarbutton.UseVisualStyleBackColor = false;
             // 
             // Editarbutton
             // 
+            this.Editarbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Editarbutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Editarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Editarbutton.Image")));
-            this.Editarbutton.Location = new System.Drawing.Point(409, 666);
+            this.Editarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Editarbutton.Location = new System.Drawing.Point(408, 685);
             this.Editarbutton.Name = "Editarbutton";
-            this.Editarbutton.Size = new System.Drawing.Size(135, 88);
+            this.Editarbutton.Size = new System.Drawing.Size(214, 75);
             this.Editarbutton.TabIndex = 14;
-            this.Editarbutton.UseVisualStyleBackColor = true;
+            this.Editarbutton.Text = "Editar";
+            this.Editarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Editarbutton.UseVisualStyleBackColor = false;
             // 
             // errorProvider1
             // 
@@ -525,6 +551,7 @@
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.Name = "RegistroVendedor";
             this.Text = "RegistroVendedor";
             this.panel1.ResumeLayout(false);

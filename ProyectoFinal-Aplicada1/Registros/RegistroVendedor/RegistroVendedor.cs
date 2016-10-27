@@ -12,9 +12,16 @@ namespace ProyectoFinal_Aplicada1.RegistroVendedor
 {
     public partial class RegistroVendedor : Form
     {
+        ValidacionLetrayNumero vl = new ValidacionLetrayNumero();
         public RegistroVendedor()
         {
             InitializeComponent();
+            TipoVehiculocomboBox.Enabled = false;
+            TipoVehiculo2comboBox.Enabled = false;
+            DescripciontextBox.Enabled = false;
+            VehiculoAsignadocomboBox.Enabled = false;
+            RutaAsignadatextBox.Enabled = false;
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -30,7 +37,7 @@ namespace ProyectoFinal_Aplicada1.RegistroVendedor
         private void button2_Click(object sender, EventArgs e)
         {
             Vendedor vendedores = new Vendedor();
-
+            vendedores = LLenarFormulario();
             if(!Confirmar())
             {
                 MessageBox.Show("Todos los campos deben estar llenos");
@@ -82,7 +89,56 @@ namespace ProyectoFinal_Aplicada1.RegistroVendedor
             return vendedores;
             
         }
+
+        private void VehiculoPropiocomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (VehiculoPropiocomboBox.Text.Equals ("Si"))
+            {
+                TipoVehiculocomboBox.Enabled = true;
+
+                DescripciontextBox.Enabled = true;
+
+                RutaAsignadatextBox.Enabled = true;
+            }
+            else if (VehiculoPropiocomboBox.Text.Equals("No"))
+            {
+                TipoVehiculocomboBox.Enabled = false;
+                TipoVehiculo2comboBox.Enabled = true;
+                DescripciontextBox.Enabled = true;
+                VehiculoAsignadocomboBox.Enabled = true;
+                RutaAsignadatextBox.Enabled = true;
+            }
             
-        
+        }
+
+        private void NombretextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vl.SoloLetras(e);
+        }
+
+        private void ApellidotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vl.SoloLetras(e);
+        }
+
+        private void CedulamaskedTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vl.SoloNumero(e);
+        }
+
+        private void TelefonoMovilmaskedTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vl.SoloNumero(e);
+        }
+
+        private void TelefonoFijomaskedTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vl.SoloNumero(e);
+        }
+
+        private void VendedorIdtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vl.SoloNumero(e);
+        }
     }
 }

@@ -37,5 +37,13 @@ namespace ProyectoFinal_Aplicada1
             RegistroProducto.RegistrosProductos rProducto = new RegistroProducto.RegistrosProductos();
             rProducto.Show();
         }
+
+        private void crearFacturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultar.ConsultaVendedores rConsultaVend = new Consultar.ConsultaVendedores();
+            rConsultaVend.Show();
+
+            
+        }
     }
 }

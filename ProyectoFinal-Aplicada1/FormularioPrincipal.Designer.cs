@@ -44,6 +44,8 @@
             this.historialDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +68,7 @@
             // 
             this.registroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registroVendedorToolStripMenuItem,
+            this.registroUsuarioToolStripMenuItem,
             this.salirToolStripMenuItem,
             this.registroProveedorToolStripMenuItem});
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
@@ -97,10 +100,11 @@
             // 
             this.facturacionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearFacturaToolStripMenuItem,
+            this.consultaUsuarioToolStripMenuItem,
             this.eliminarFacturaToolStripMenuItem,
             this.salirToolStripMenuItem1,
-            this.cToolStripMenuItem,
-            this.consultaCompraToolStripMenuItem});
+            this.consultaCompraToolStripMenuItem,
+            this.cToolStripMenuItem});
             this.facturacionToolStripMenuItem.Name = "facturacionToolStripMenuItem";
             this.facturacionToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
             this.facturacionToolStripMenuItem.Text = "Consulta";
@@ -110,6 +114,7 @@
             this.crearFacturaToolStripMenuItem.Name = "crearFacturaToolStripMenuItem";
             this.crearFacturaToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.crearFacturaToolStripMenuItem.Text = "Consulta Vendedores";
+            this.crearFacturaToolStripMenuItem.Click += new System.EventHandler(this.crearFacturaToolStripMenuItem_Click);
             // 
             // eliminarFacturaToolStripMenuItem
             // 
@@ -168,6 +173,18 @@
             this.salirToolStripMenuItem2.Size = new System.Drawing.Size(50, 24);
             this.salirToolStripMenuItem2.Text = "Salir";
             // 
+            // consultaUsuarioToolStripMenuItem
+            // 
+            this.consultaUsuarioToolStripMenuItem.Name = "consultaUsuarioToolStripMenuItem";
+            this.consultaUsuarioToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
+            this.consultaUsuarioToolStripMenuItem.Text = "Consulta Usuario";
+            // 
+            // registroUsuarioToolStripMenuItem
+            // 
+            this.registroUsuarioToolStripMenuItem.Name = "registroUsuarioToolStripMenuItem";
+            this.registroUsuarioToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.registroUsuarioToolStripMenuItem.Text = "Registro Usuario";
+            // 
             // FormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -203,6 +220,8 @@
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem registroProveedorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroUsuarioToolStripMenuItem;
     }
 }
 

@@ -15,5 +15,7 @@ namespace DAL
         }
         public DbSet<Vendedor> Vendedor { get; set; }
 
+        public DbSet <Usuarios> Usuario { get; set; }
+
     }
 }
