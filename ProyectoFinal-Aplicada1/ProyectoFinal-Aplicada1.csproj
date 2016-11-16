@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\ConsultaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaProducto.Designer.cs">
+      <DependentUpon>ConsultaProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\ConsultaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </Compile>
     <Compile Include="Utilidades.cs" />
     <Compile Include="ValidacionLetrayNumero.cs" />
+    <EmbeddedResource Include="Consultas\ConsultaProducto.resx">
+      <DependentUpon>ConsultaProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaUsuarios.resx">
       <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +157,7 @@
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Entidades.Usuarios.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -160,10 +170,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataBase\ProyectoFinalDb.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="DataBase\ProyectoFinalDb_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>ProyectoFinalDb.mdf</DependentUpon>
     </Content>
   </ItemGroup>
@@ -188,6 +198,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{ac1ab112-77a5-49db-8d04-2aedb19ce55a}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{b1bf9cea-11ca-4c38-8ec2-f7a807dc2d01}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{2aefab52-fdcf-4263-b8df-3419b2680426}</Project>

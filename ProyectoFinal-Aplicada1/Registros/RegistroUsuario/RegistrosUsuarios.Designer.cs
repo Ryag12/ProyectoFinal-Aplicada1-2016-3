@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrosUsuarios));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -42,7 +43,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -85,11 +94,12 @@
             this.CancelarUsbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CancelarUsbutton.Location = new System.Drawing.Point(373, 490);
             this.CancelarUsbutton.Name = "CancelarUsbutton";
-            this.CancelarUsbutton.Size = new System.Drawing.Size(186, 55);
+            this.CancelarUsbutton.Size = new System.Drawing.Size(164, 55);
             this.CancelarUsbutton.TabIndex = 10;
-            this.CancelarUsbutton.Text = "Cancelar";
+            this.CancelarUsbutton.Text = "Nuevo";
             this.CancelarUsbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.CancelarUsbutton.UseVisualStyleBackColor = false;
+            this.CancelarUsbutton.Click += new System.EventHandler(this.CancelarUsbutton_Click);
             // 
             // CrearUsbutton
             // 
@@ -127,6 +137,8 @@
             this.NombreUsuariotextBox.Name = "NombreUsuariotextBox";
             this.NombreUsuariotextBox.Size = new System.Drawing.Size(275, 30);
             this.NombreUsuariotextBox.TabIndex = 6;
+            this.NombreUsuariotextBox.TextChanged += new System.EventHandler(this.NombreUsuariotextBox_TextChanged);
+            this.NombreUsuariotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreUsuariotextBox_KeyPress);
             // 
             // UsuarioIdtextBox
             // 
@@ -134,6 +146,7 @@
             this.UsuarioIdtextBox.Name = "UsuarioIdtextBox";
             this.UsuarioIdtextBox.Size = new System.Drawing.Size(275, 30);
             this.UsuarioIdtextBox.TabIndex = 5;
+            this.UsuarioIdtextBox.TextChanged += new System.EventHandler(this.UsuarioIdtextBox_TextChanged);
             // 
             // label5
             // 
@@ -175,6 +188,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "UsuarioId";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.ContainerControl = this;
+            // 
             // RegistrosUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -185,6 +214,10 @@
             this.Text = "RegistrosUsuarios";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,5 +237,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.DirectoryServices.DirectoryEntry directoryEntry1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
     }
 }

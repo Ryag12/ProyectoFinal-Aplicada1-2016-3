@@ -45,5 +45,17 @@ namespace ProyectoFinal_Aplicada1
 
             
         }
+
+        private void registroUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registros.RegistroUsuario.RegistrosUsuarios rUsuarios = new Registros.RegistroUsuario.RegistrosUsuarios();
+            rUsuarios.Show();
+        }
+
+        private void consultaUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultas.ConsultaUsuarios rConsultaUs = new Consultas.ConsultaUsuarios();
+            rConsultaUs.Show();
+        }
     }
 }
