@@ -11,23 +11,25 @@ namespace BLL
         public static bool Guardar(Vendedor vendedor)
         {
             bool retorno = false;
-            try
+            using (var conexion = new ProyectoFinalDb())
             {
-                ProyectoFinalDb db = new ProyectoFinalDb();
+                try
+                {
 
-                db.Vendedor.Add(vendedor);
+                    conexion.Vendedor.Add(vendedor);
 
-                db.SaveChanges();
+                    conexion.SaveChanges();
 
-                retorno = true;
-            }
-            catch (Exception)
-            {
+                    retorno = true;
+                }
+                catch (Exception)
+                {
 
-                throw;
-            }
+                    throw;
+                }
 
             return retorno;
+            }
         }
 
         public static void Eliminar(int id)

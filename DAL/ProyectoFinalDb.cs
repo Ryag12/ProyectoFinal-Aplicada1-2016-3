@@ -17,5 +17,7 @@ namespace DAL
 
         public DbSet <Usuarios> Usuario { get; set; }
 
+        public DbSet<Productos> Productos { get; set; }
+
     }
 }

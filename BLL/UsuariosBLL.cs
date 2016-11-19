@@ -32,21 +32,51 @@ namespace BLL
 
         }
 
-        public static void Eliminar(int id)
+        public static bool Eliminar(int id)
         {
-            var db = new ProyectoFinalDb();
+            bool obtener = false;
+            using (var db = new ProyectoFinalDb())
+            {
+                try
+                {
+                    Usuarios us = db.Usuario.Find(id);
 
-            Usuarios usuario = Buscar(id);
+                    db.Usuario.Remove(us);
 
-            db.Usuario.Remove(usuario);
-            db.SaveChanges();
+                    db.SaveChanges();
+
+                    obtener = true;
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                return obtener;
+            }
+
         }
 
-        public static Usuarios Buscar(int id)
+        public static bool Buscar(int id)
         {
-            var db = new ProyectoFinalDb();
+            bool obtener = false;
+            using (var conn = new  ProyectoFinalDb())
+            {
+                try
+                {
+                    Usuarios us = new Usuarios();
+                    us =  conn.Usuario.Find(id);
+                    obtener = true;
+                }
+                catch (Exception)
+                {
 
-            return db.Usuario.Find(id);
+                    throw;
+                }
+
+                return obtener;
+            }
+       
         }
 
         public static List<Usuarios> GetLista()

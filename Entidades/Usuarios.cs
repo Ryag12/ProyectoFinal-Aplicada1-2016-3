@@ -15,6 +15,6 @@ namespace Entidades
 
         public string Contrasena { get; set; }
 
-        public string RepContrasena { get; set; }
+       // public string RepContrasena { get; set; }
     }
 }

@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrosUsuarios));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.CancelarUsbutton = new System.Windows.Forms.Button();
             this.CrearUsbutton = new System.Windows.Forms.Button();
             this.RepContratextBox = new System.Windows.Forms.TextBox();
@@ -56,12 +55,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Silver;
-            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.groupBox1.Controls.Add(this.progressBar1);
-            this.groupBox1.Controls.Add(this.CancelarUsbutton);
-            this.groupBox1.Controls.Add(this.CrearUsbutton);
             this.groupBox1.Controls.Add(this.RepContratextBox);
             this.groupBox1.Controls.Add(this.ContrasenatextBox);
             this.groupBox1.Controls.Add(this.NombreUsuariotextBox);
@@ -70,31 +65,27 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.groupBox1.Location = new System.Drawing.Point(12, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(597, 620);
+            this.groupBox1.Size = new System.Drawing.Size(597, 559);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "UserRegister";
             // 
-            // progressBar1
-            // 
-            this.progressBar1.ForeColor = System.Drawing.Color.Lime;
-            this.progressBar1.Location = new System.Drawing.Point(156, 573);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(331, 41);
-            this.progressBar1.TabIndex = 11;
-            // 
             // CancelarUsbutton
             // 
             this.CancelarUsbutton.BackColor = System.Drawing.Color.Transparent;
+            this.CancelarUsbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelarUsbutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelarUsbutton.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.CancelarUsbutton.Image = ((System.Drawing.Image)(resources.GetObject("CancelarUsbutton.Image")));
             this.CancelarUsbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CancelarUsbutton.Location = new System.Drawing.Point(373, 490);
+            this.CancelarUsbutton.Location = new System.Drawing.Point(421, 600);
             this.CancelarUsbutton.Name = "CancelarUsbutton";
-            this.CancelarUsbutton.Size = new System.Drawing.Size(164, 55);
+            this.CancelarUsbutton.Size = new System.Drawing.Size(188, 55);
             this.CancelarUsbutton.TabIndex = 10;
             this.CancelarUsbutton.Text = "Nuevo";
             this.CancelarUsbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -104,9 +95,12 @@
             // CrearUsbutton
             // 
             this.CrearUsbutton.BackColor = System.Drawing.Color.Transparent;
+            this.CrearUsbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CrearUsbutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CrearUsbutton.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.CrearUsbutton.Image = ((System.Drawing.Image)(resources.GetObject("CrearUsbutton.Image")));
             this.CrearUsbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CrearUsbutton.Location = new System.Drawing.Point(16, 490);
+            this.CrearUsbutton.Location = new System.Drawing.Point(25, 600);
             this.CrearUsbutton.Name = "CrearUsbutton";
             this.CrearUsbutton.Size = new System.Drawing.Size(206, 55);
             this.CrearUsbutton.TabIndex = 9;
@@ -208,8 +202,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(634, 667);
+            this.Controls.Add(this.CancelarUsbutton);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.CrearUsbutton);
             this.Name = "RegistrosUsuarios";
             this.Text = "RegistrosUsuarios";
             this.groupBox1.ResumeLayout(false);
@@ -225,7 +222,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button CancelarUsbutton;
         private System.Windows.Forms.Button CrearUsbutton;
         private System.Windows.Forms.TextBox RepContratextBox;

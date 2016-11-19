@@ -140,5 +140,10 @@ namespace ProyectoFinal_Aplicada1.RegistroVendedor
         {
             vl.SoloNumero(e);
         }
+
+        private void Editarbutton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

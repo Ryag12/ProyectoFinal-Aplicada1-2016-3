@@ -64,7 +64,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.Editarbutton = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -78,6 +77,11 @@
             this.errorProvider11 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider12 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider13 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Editarbutton = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.AgregarFotoVendebutton = new System.Windows.Forms.Button();
+            this.EliminarFotoVendebutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -93,19 +97,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider13)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.TipoVehiculo2comboBox);
             this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.VehiculoAsignadocomboBox);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.RutaAsignadatextBox);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.DescripciontextBox);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.TipoVehiculocomboBox);
@@ -132,9 +139,9 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(42, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1050, 651);
+            this.panel1.Size = new System.Drawing.Size(1191, 660);
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -205,7 +212,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(788, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(911, 11);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(238, 258);
             this.pictureBox1.TabIndex = 26;
@@ -327,15 +334,16 @@
             "Mujer"});
             this.SexocomboBox.Location = new System.Drawing.Point(7, 192);
             this.SexocomboBox.Name = "SexocomboBox";
-            this.SexocomboBox.Size = new System.Drawing.Size(149, 31);
+            this.SexocomboBox.Size = new System.Drawing.Size(304, 31);
             this.SexocomboBox.TabIndex = 13;
             // 
             // VendedorIdtextBox
             // 
+            this.VendedorIdtextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.VendedorIdtextBox.Location = new System.Drawing.Point(111, 14);
             this.VendedorIdtextBox.Multiline = true;
             this.VendedorIdtextBox.Name = "VendedorIdtextBox";
-            this.VendedorIdtextBox.Size = new System.Drawing.Size(45, 26);
+            this.VendedorIdtextBox.Size = new System.Drawing.Size(82, 35);
             this.VendedorIdtextBox.TabIndex = 12;
             this.VendedorIdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.VendedorIdtextBox_KeyPress);
             // 
@@ -453,9 +461,9 @@
             this.Guardarbutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardarbutton.Location = new System.Drawing.Point(58, 682);
+            this.Guardarbutton.Location = new System.Drawing.Point(27, 16);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(205, 72);
+            this.Guardarbutton.Size = new System.Drawing.Size(186, 72);
             this.Guardarbutton.TabIndex = 12;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -464,31 +472,18 @@
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Eliminarbutton.BackColor = System.Drawing.Color.White;
+            this.Eliminarbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Eliminarbutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Eliminarbutton.Location = new System.Drawing.Point(743, 686);
+            this.Eliminarbutton.Location = new System.Drawing.Point(560, 16);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(218, 72);
             this.Eliminarbutton.TabIndex = 13;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Eliminarbutton.UseVisualStyleBackColor = false;
-            // 
-            // Editarbutton
-            // 
-            this.Editarbutton.BackColor = System.Drawing.Color.Transparent;
-            this.Editarbutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Editarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Editarbutton.Image")));
-            this.Editarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Editarbutton.Location = new System.Drawing.Point(408, 685);
-            this.Editarbutton.Name = "Editarbutton";
-            this.Editarbutton.Size = new System.Drawing.Size(214, 75);
-            this.Editarbutton.TabIndex = 14;
-            this.Editarbutton.Text = "Editar";
-            this.Editarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Editarbutton.UseVisualStyleBackColor = false;
             // 
             // errorProvider1
             // 
@@ -542,15 +537,75 @@
             // 
             this.errorProvider13.ContainerControl = this;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.Editarbutton);
+            this.panel2.Controls.Add(this.Guardarbutton);
+            this.panel2.Controls.Add(this.Eliminarbutton);
+            this.panel2.Location = new System.Drawing.Point(155, 708);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(799, 115);
+            this.panel2.TabIndex = 12;
+            // 
+            // Editarbutton
+            // 
+            this.Editarbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Editarbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Editarbutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Editarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Editarbutton.Image")));
+            this.Editarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Editarbutton.Location = new System.Drawing.Point(301, 16);
+            this.Editarbutton.Name = "Editarbutton";
+            this.Editarbutton.Size = new System.Drawing.Size(172, 72);
+            this.Editarbutton.TabIndex = 15;
+            this.Editarbutton.Text = "Nuevo";
+            this.Editarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Editarbutton.UseVisualStyleBackColor = false;
+            this.Editarbutton.Click += new System.EventHandler(this.Editarbutton_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.EliminarFotoVendebutton);
+            this.panel3.Controls.Add(this.AgregarFotoVendebutton);
+            this.panel3.Location = new System.Drawing.Point(845, 288);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(329, 67);
+            this.panel3.TabIndex = 33;
+            // 
+            // AgregarFotoVendebutton
+            // 
+            this.AgregarFotoVendebutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AgregarFotoVendebutton.BackgroundImage")));
+            this.AgregarFotoVendebutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.AgregarFotoVendebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AgregarFotoVendebutton.Location = new System.Drawing.Point(16, 3);
+            this.AgregarFotoVendebutton.Name = "AgregarFotoVendebutton";
+            this.AgregarFotoVendebutton.Size = new System.Drawing.Size(115, 51);
+            this.AgregarFotoVendebutton.TabIndex = 0;
+            this.AgregarFotoVendebutton.UseVisualStyleBackColor = true;
+            // 
+            // EliminarFotoVendebutton
+            // 
+            this.EliminarFotoVendebutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EliminarFotoVendebutton.BackgroundImage")));
+            this.EliminarFotoVendebutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.EliminarFotoVendebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarFotoVendebutton.Location = new System.Drawing.Point(202, 3);
+            this.EliminarFotoVendebutton.Name = "EliminarFotoVendebutton";
+            this.EliminarFotoVendebutton.Size = new System.Drawing.Size(115, 51);
+            this.EliminarFotoVendebutton.TabIndex = 1;
+            this.EliminarFotoVendebutton.UseVisualStyleBackColor = true;
+            // 
             // RegistroVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 763);
-            this.Controls.Add(this.Editarbutton);
-            this.Controls.Add(this.Eliminarbutton);
-            this.Controls.Add(this.Guardarbutton);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(1313, 872);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.Name = "RegistroVendedor";
             this.Text = "RegistroVendedor";
@@ -570,6 +625,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider13)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -610,7 +667,6 @@
         private System.Windows.Forms.ComboBox VehiculoAsignadocomboBox;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
-        private System.Windows.Forms.Button Editarbutton;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ErrorProvider errorProvider3;
@@ -624,5 +680,10 @@
         private System.Windows.Forms.ErrorProvider errorProvider11;
         private System.Windows.Forms.ErrorProvider errorProvider12;
         private System.Windows.Forms.ErrorProvider errorProvider13;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button Editarbutton;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button EliminarFotoVendebutton;
+        private System.Windows.Forms.Button AgregarFotoVendebutton;
     }
 }
