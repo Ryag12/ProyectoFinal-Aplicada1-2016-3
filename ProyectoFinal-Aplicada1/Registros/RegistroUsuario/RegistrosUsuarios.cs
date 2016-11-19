@@ -64,7 +64,7 @@ namespace ProyectoFinal_Aplicada1.Registros.RegistroUsuario
             usuario.Usuarioid = Utilidades.ToInt(UsuarioIdtextBox.Text);
             usuario.Nombre =NombreUsuariotextBox.Text;
             usuario.Contrasena = ContrasenatextBox.Text;
-            usuario.RepContrasena = RepContratextBox.Text;
+            //usuario.RepContrasena = RepContratextBox.Text;
                         
             return usuario;
 

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Entidades;
-using BLL;
+
 namespace BLL.Tests
 {
     [TestClass()]
@@ -29,7 +29,8 @@ namespace BLL.Tests
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.IsTrue(ProductosBLL.Eliminar(3));
+               
+            Assert.IsTrue(ProductosBLL.Eliminar(5));
         }
 
         [TestMethod()]

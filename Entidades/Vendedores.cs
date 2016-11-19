@@ -7,7 +7,7 @@ using System.Text;
 namespace Entidades
 {
     
-   public class Vendedor
+   public class Vendedores
     {
         [Key]
         public int VendedorId { get; set; }

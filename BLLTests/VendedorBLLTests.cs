@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Entidades;
-using BLL;
+
 namespace BLL.Tests
 {
     [TestClass()]
@@ -14,20 +14,29 @@ namespace BLL.Tests
         [TestMethod()]
         public void GuardarTest()
         {
-            Vendedor vendedor = new Vendedor();
+            Vendedores vendedor = new Vendedores();
+            vendedor.Nombre = "Robert";
+            vendedor.Apellido = "Frias";
+            vendedor.Sexo = "Hombre";
+            vendedor.Cedula = "1215545";
+            vendedor.TelefonoFijo = "4456";
+            vendedor.TelefonoMovil = "4456";
+            vendedor.Direccion = "4456";
+            vendedor.Zona = "4456";
+            vendedor.TipoVehiculo = "4456";
             Assert.IsTrue(VendedorBLL.Guardar(vendedor));
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.Fail();
+            Assert.IsTrue(VendedorBLL.Eliminar(1));
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            Assert.IsTrue(VendedorBLL.Buscar(1));
         }
 
         [TestMethod()]
@@ -39,7 +48,7 @@ namespace BLL.Tests
         [TestMethod()]
         public void GetListaTest1()
         {
-            Assert.Fail();
+            Assert.IsTrue(VendedorBLL.GetLista(1).Count > 0);
         }
     }
 }
