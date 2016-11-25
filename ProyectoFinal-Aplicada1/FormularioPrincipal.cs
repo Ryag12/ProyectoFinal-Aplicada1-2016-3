@@ -57,5 +57,12 @@ namespace ProyectoFinal_Aplicada1
             Consultas.ConsultaUsuarios rConsultaUs = new Consultas.ConsultaUsuarios();
             rConsultaUs.Show();
         }
+
+        private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registros.Facturacion.Factura fact = new Registros.Facturacion.Factura();
+            // rVendedor.MdiParent = this;
+            fact.Show();
+        }
     }
 }

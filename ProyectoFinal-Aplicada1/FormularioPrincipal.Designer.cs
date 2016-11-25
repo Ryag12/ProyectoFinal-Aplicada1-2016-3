@@ -46,6 +46,7 @@
             this.historialDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             this.salirToolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1085, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1431, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,7 +71,8 @@
             this.registroVendedorToolStripMenuItem,
             this.registroUsuarioToolStripMenuItem,
             this.salirToolStripMenuItem,
-            this.registroProveedorToolStripMenuItem});
+            this.registroProveedorToolStripMenuItem,
+            this.facturaToolStripMenuItem});
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.registroToolStripMenuItem.Text = "Registros";
@@ -187,12 +189,19 @@
             this.salirToolStripMenuItem2.Size = new System.Drawing.Size(50, 24);
             this.salirToolStripMenuItem2.Text = "Salir";
             // 
+            // facturaToolStripMenuItem
+            // 
+            this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
+            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.facturaToolStripMenuItem.Text = "Factura";
+            this.facturaToolStripMenuItem.Click += new System.EventHandler(this.facturaToolStripMenuItem_Click);
+            // 
             // FormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1085, 653);
+            this.ClientSize = new System.Drawing.Size(1431, 680);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormularioPrincipal";
@@ -224,6 +233,7 @@
         private System.Windows.Forms.ToolStripMenuItem registroProveedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem facturaToolStripMenuItem;
     }
 }
 

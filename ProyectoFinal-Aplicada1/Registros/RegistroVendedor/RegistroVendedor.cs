@@ -36,7 +36,7 @@ namespace ProyectoFinal_Aplicada1.RegistroVendedor
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Vendedor vendedores = new Vendedor();
+            Vendedores vendedores = new Vendedores();
             vendedores = LLenarFormulario();
             if(!Confirmar())
             {
@@ -74,9 +74,9 @@ namespace ProyectoFinal_Aplicada1.RegistroVendedor
 
         }
 
-        private Vendedor LLenarFormulario()
+        private Vendedores LLenarFormulario()
         {
-            Vendedor vendedores = new Vendedor();
+            Vendedores vendedores = new Vendedores();
             vendedores.VendedorId = Utilidades.ToInt(VendedorIdtextBox.Text);
             vendedores.Nombre = NombretextBox.Text;
             vendedores.Apellido = ApellidotextBox.Text;

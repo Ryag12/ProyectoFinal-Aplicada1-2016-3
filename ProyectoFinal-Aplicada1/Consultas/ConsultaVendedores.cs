@@ -16,7 +16,7 @@ namespace ProyectoFinal_Aplicada1.Consultar
         {
             InitializeComponent();
         }
-        public List<Vendedor> lista = new List<Vendedor>();
+        public List<Vendedores> lista = new List<Vendedores>();
 
         private void ConsultaVendedores_Load(object sender, EventArgs e)
         {
