@@ -21,6 +21,9 @@ namespace ProyectoFinal_Aplicada1.Registros.RegistroUsuario
             NombreUsuariotextBox.Enabled = false;
             ContrasenatextBox.Enabled = false;
             RepContratextBox.Enabled = false;
+            label3.Enabled = false;
+            label5.Enabled = false;
+            label7.Enabled = false;
         }
 
         private void CrearUsbutton_Click(object sender, EventArgs e)
@@ -91,6 +94,11 @@ namespace ProyectoFinal_Aplicada1.Registros.RegistroUsuario
             NombreUsuariotextBox.Enabled = true;
             ContrasenatextBox.Enabled = true;
             RepContratextBox.Enabled = true;
+        }
+
+        private void UsuarioIdtextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            UsuarioIdtextBox.Clear();
         }
     }
     
