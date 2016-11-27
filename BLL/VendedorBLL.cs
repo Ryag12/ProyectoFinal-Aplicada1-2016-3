@@ -56,23 +56,22 @@ namespace BLL
             
         }
 
-        public static bool Buscar(int id)
+        public static Vendedores Buscar(int vendedorId)
         {
-            bool r = false;
-            using (var db = new ProyectoFinalDb())
+            var vendedor = new Vendedores();
+            using (var conexion = new ProyectoFinalDb())
             {
                 try
                 {
-                    db.Vendedor.Find(id);
-                    r = true;
+                    vendedor = conexion.Vendedor.Find(vendedorId);
                 }
                 catch (Exception)
                 {
 
                     throw;
                 }
-                return r;
-            }    
+            }
+            return vendedor;
         }
 
         public static List<Vendedores> GetLista()

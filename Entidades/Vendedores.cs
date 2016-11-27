@@ -29,5 +29,11 @@ namespace Entidades
         public string Zona { get; set; }
 
         public string TipoVehiculo { get; set; }
+
+        public string VehiculoPropio { get; set; }
+
+        public string VehiculoPropio2 { get; set; }
+
+        public string MyProperty { get; set; }
     }
 }

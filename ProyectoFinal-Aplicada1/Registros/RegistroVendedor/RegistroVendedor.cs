@@ -74,6 +74,25 @@ namespace ProyectoFinal_Aplicada1.RegistroVendedor
 
         }
 
+        private void Limpiar()
+        {
+            VendedorIdtextBox.Text = "";
+            ApellidotextBox.Text = "";
+            SexocomboBox.Text = "";
+            CedulamaskedTextBox.Text = "";
+            TelefonoFijomaskedTextBox.Text = "";
+            TelefonoMovilmaskedTextBox.Text = "";
+            DirecciontextBox.Text = "";
+            ZonatextBox.Text = "";
+            VehiculoPropiocomboBox.Text = "";
+            TipoVehiculocomboBox.Text = "";
+            DescripciontextBox.Text = "";
+            VehiculoAsignadocomboBox.Text = "";
+            TipoVehiculo2comboBox.Text = "";
+            RutaAsignadatextBox.Text = "";
+
+        }
+
         private Vendedores LLenarFormulario()
         {
             Vendedores vendedores = new Vendedores();
@@ -143,7 +162,24 @@ namespace ProyectoFinal_Aplicada1.RegistroVendedor
 
         private void Editarbutton_Click(object sender, EventArgs e)
         {
+            Limpiar();
+        }
 
+        private void BuscarVendedorbutton_Click(object sender, EventArgs e)
+        {
+            var vendedor = VendedorBLL.Buscar(Convert.ToInt32(VendedorIdtextBox.Text));
+            if(vendedor != null)
+            {
+                NombretextBox.Text = vendedor.Nombre;
+                ApellidotextBox.Text = vendedor.Apellido;
+                SexocomboBox.SelectedValue = vendedor.Sexo;
+                CedulamaskedTextBox.Text = vendedor.Cedula;
+                TelefonoFijomaskedTextBox.Text = vendedor.TelefonoFijo;
+                TelefonoMovilmaskedTextBox.Text = vendedor.TelefonoMovil;
+                DirecciontextBox.Text = vendedor.Direccion;
+                ZonatextBox.Text = vendedor.Zona;
+                VehiculoPropiocomboBox.SelectedValue = vendedor.
+            }
         }
     }
 }

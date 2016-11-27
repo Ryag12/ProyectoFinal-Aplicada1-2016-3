@@ -57,26 +57,15 @@ namespace BLL
 
         }
 
-        public static bool Buscar(int id)
+        public static Usuarios Buscar(int id)
         {
-            bool obtener = false;
-            using (var conn = new  ProyectoFinalDb())
-            {
-                try
-                {
-                    Usuarios us = new Usuarios();
-                    us =  conn.Usuario.Find(id);
-                    obtener = true;
-                }
-                catch (Exception)
-                {
 
-                    throw;
-                }
+            var us = new Usuarios();
+            var conn = new ProyectoFinalDb();
 
-                return obtener;
-            }
-       
+            us = conn.Usuario.Find(id);
+            return us;
+
         }
 
         public static List<Usuarios> GetLista()

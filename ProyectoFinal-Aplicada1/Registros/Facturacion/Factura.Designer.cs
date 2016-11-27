@@ -30,7 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factura));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.ElegirVendedorcomboBox = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.AbonartextBox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.PrecioNetocomboBox = new System.Windows.Forms.ComboBox();
             this.CantidadArttextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,31 +58,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.ElegirVendedorcomboBox = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.AbonartextBox = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -100,8 +101,67 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(12, 140);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1438, 270);
+            this.panel2.Size = new System.Drawing.Size(1438, 261);
             this.panel2.TabIndex = 3;
+            // 
+            // label21
+            // 
+            this.label21.Image = ((System.Drawing.Image)(resources.GetObject("label21.Image")));
+            this.label21.Location = new System.Drawing.Point(240, 3);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(58, 55);
+            this.label21.TabIndex = 15;
+            // 
+            // label14
+            // 
+            this.label14.Image = ((System.Drawing.Image)(resources.GetObject("label14.Image")));
+            this.label14.Location = new System.Drawing.Point(527, 210);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(58, 55);
+            this.label14.TabIndex = 14;
+            // 
+            // label13
+            // 
+            this.label13.Image = ((System.Drawing.Image)(resources.GetObject("label13.Image")));
+            this.label13.Location = new System.Drawing.Point(527, 155);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 55);
+            this.label13.TabIndex = 13;
+            // 
+            // label12
+            // 
+            this.label12.Image = ((System.Drawing.Image)(resources.GetObject("label12.Image")));
+            this.label12.Location = new System.Drawing.Point(527, 100);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(58, 55);
+            this.label12.TabIndex = 12;
+            // 
+            // label11
+            // 
+            this.label11.Image = ((System.Drawing.Image)(resources.GetObject("label11.Image")));
+            this.label11.Location = new System.Drawing.Point(527, 54);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 55);
+            this.label11.TabIndex = 11;
+            // 
+            // ElegirVendedorcomboBox
+            // 
+            this.ElegirVendedorcomboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ElegirVendedorcomboBox.FormattingEnabled = true;
+            this.ElegirVendedorcomboBox.Location = new System.Drawing.Point(129, 69);
+            this.ElegirVendedorcomboBox.Name = "ElegirVendedorcomboBox";
+            this.ElegirVendedorcomboBox.Size = new System.Drawing.Size(392, 24);
+            this.ElegirVendedorcomboBox.TabIndex = 10;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(8, 65);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(100, 25);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Vendedor";
             // 
             // panel3
             // 
@@ -121,6 +181,62 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(781, 231);
             this.panel3.TabIndex = 8;
+            // 
+            // label22
+            // 
+            this.label22.Image = ((System.Drawing.Image)(resources.GetObject("label22.Image")));
+            this.label22.Location = new System.Drawing.Point(483, 5);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(58, 55);
+            this.label22.TabIndex = 16;
+            // 
+            // label18
+            // 
+            this.label18.Image = ((System.Drawing.Image)(resources.GetObject("label18.Image")));
+            this.label18.Location = new System.Drawing.Point(495, 97);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(64, 61);
+            this.label18.TabIndex = 15;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.Black;
+            this.textBox2.Location = new System.Drawing.Point(143, 173);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(334, 40);
+            this.textBox2.TabIndex = 15;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(31, 188);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(103, 25);
+            this.label16.TabIndex = 14;
+            this.label16.Text = "Sub-Total:";
+            // 
+            // AbonartextBox
+            // 
+            this.AbonartextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AbonartextBox.ForeColor = System.Drawing.Color.Black;
+            this.AbonartextBox.Location = new System.Drawing.Point(143, 118);
+            this.AbonartextBox.Multiline = true;
+            this.AbonartextBox.Name = "AbonartextBox";
+            this.AbonartextBox.Size = new System.Drawing.Size(334, 40);
+            this.AbonartextBox.TabIndex = 13;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(49, 133);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(85, 25);
+            this.label15.TabIndex = 12;
+            this.label15.Text = "Abonar:";
             // 
             // PrecioNetocomboBox
             // 
@@ -261,6 +377,41 @@
             this.panel1.Size = new System.Drawing.Size(1448, 81);
             this.panel1.TabIndex = 5;
             // 
+            // label20
+            // 
+            this.label20.Image = ((System.Drawing.Image)(resources.GetObject("label20.Image")));
+            this.label20.Location = new System.Drawing.Point(405, 7);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(58, 55);
+            this.label20.TabIndex = 13;
+            // 
+            // label19
+            // 
+            this.label19.Image = ((System.Drawing.Image)(resources.GetObject("label19.Image")));
+            this.label19.Location = new System.Drawing.Point(1361, 7);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(58, 55);
+            this.label19.TabIndex = 12;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Location = new System.Drawing.Point(968, 12);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(369, 50);
+            this.textBox3.TabIndex = 3;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(811, 21);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(151, 32);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "Total Pagar:";
+            // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -293,35 +444,31 @@
             this.panel4.Size = new System.Drawing.Size(1438, 113);
             this.panel4.TabIndex = 6;
             // 
-            // label8
+            // dateTimePicker2
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Beige;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(21, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 41);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "SFYAG";
+            this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(1031, 36);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(372, 31);
+            this.dateTimePicker2.TabIndex = 13;
             // 
-            // label9
+            // dateTimePicker1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(8, 65);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 25);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Vendedor";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(646, 37);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(356, 31);
+            this.dateTimePicker1.TabIndex = 12;
             // 
-            // ElegirVendedorcomboBox
+            // label10
             // 
-            this.ElegirVendedorcomboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ElegirVendedorcomboBox.FormattingEnabled = true;
-            this.ElegirVendedorcomboBox.Location = new System.Drawing.Point(129, 69);
-            this.ElegirVendedorcomboBox.Name = "ElegirVendedorcomboBox";
-            this.ElegirVendedorcomboBox.Size = new System.Drawing.Size(392, 24);
-            this.ElegirVendedorcomboBox.TabIndex = 10;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(576, 42);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 25);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Entre:";
             // 
             // button2
             // 
@@ -338,175 +485,39 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // label10
+            // label8
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(576, 42);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 25);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Entre:";
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Beige;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(21, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(109, 41);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "SFYAG";
             // 
-            // dateTimePicker1
+            // panel5
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(646, 37);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(356, 31);
-            this.dateTimePicker1.TabIndex = 12;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(1031, 36);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(372, 31);
-            this.dateTimePicker2.TabIndex = 13;
-            // 
-            // label11
-            // 
-            this.label11.Image = ((System.Drawing.Image)(resources.GetObject("label11.Image")));
-            this.label11.Location = new System.Drawing.Point(527, 54);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 55);
-            this.label11.TabIndex = 11;
-            // 
-            // label12
-            // 
-            this.label12.Image = ((System.Drawing.Image)(resources.GetObject("label12.Image")));
-            this.label12.Location = new System.Drawing.Point(527, 100);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 55);
-            this.label12.TabIndex = 12;
-            // 
-            // label13
-            // 
-            this.label13.Image = ((System.Drawing.Image)(resources.GetObject("label13.Image")));
-            this.label13.Location = new System.Drawing.Point(527, 155);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 55);
-            this.label13.TabIndex = 13;
-            // 
-            // label14
-            // 
-            this.label14.Image = ((System.Drawing.Image)(resources.GetObject("label14.Image")));
-            this.label14.Location = new System.Drawing.Point(527, 210);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(58, 55);
-            this.label14.TabIndex = 14;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(49, 133);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(85, 25);
-            this.label15.TabIndex = 12;
-            this.label15.Text = "Abonar:";
-            // 
-            // AbonartextBox
-            // 
-            this.AbonartextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AbonartextBox.ForeColor = System.Drawing.Color.Black;
-            this.AbonartextBox.Location = new System.Drawing.Point(143, 118);
-            this.AbonartextBox.Multiline = true;
-            this.AbonartextBox.Name = "AbonartextBox";
-            this.AbonartextBox.Size = new System.Drawing.Size(334, 40);
-            this.AbonartextBox.TabIndex = 13;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(31, 188);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(103, 25);
-            this.label16.TabIndex = 14;
-            this.label16.Text = "Sub-Total:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(143, 173);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(334, 40);
-            this.textBox2.TabIndex = 15;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(811, 21);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(151, 32);
-            this.label17.TabIndex = 2;
-            this.label17.Text = "Total Pagar:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(968, 12);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(369, 50);
-            this.textBox3.TabIndex = 3;
-            // 
-            // label18
-            // 
-            this.label18.Image = ((System.Drawing.Image)(resources.GetObject("label18.Image")));
-            this.label18.Location = new System.Drawing.Point(495, 97);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(64, 61);
-            this.label18.TabIndex = 15;
-            // 
-            // label19
-            // 
-            this.label19.Image = ((System.Drawing.Image)(resources.GetObject("label19.Image")));
-            this.label19.Location = new System.Drawing.Point(1361, 7);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(58, 55);
-            this.label19.TabIndex = 12;
-            // 
-            // label20
-            // 
-            this.label20.Image = ((System.Drawing.Image)(resources.GetObject("label20.Image")));
-            this.label20.Location = new System.Drawing.Point(405, 7);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(58, 55);
-            this.label20.TabIndex = 13;
-            // 
-            // label21
-            // 
-            this.label21.Image = ((System.Drawing.Image)(resources.GetObject("label21.Image")));
-            this.label21.Location = new System.Drawing.Point(240, 3);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(58, 55);
-            this.label21.TabIndex = 15;
-            // 
-            // label22
-            // 
-            this.label22.Image = ((System.Drawing.Image)(resources.GetObject("label22.Image")));
-            this.label22.Location = new System.Drawing.Point(483, 5);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(58, 55);
-            this.label22.TabIndex = 16;
+            this.panel5.Location = new System.Drawing.Point(1456, 12);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(237, 739);
+            this.panel5.TabIndex = 7;
             // 
             // Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(1476, 960);
+            this.ClientSize = new System.Drawing.Size(1705, 951);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Name = "Factura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Factura";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -563,5 +574,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel5;
     }
 }

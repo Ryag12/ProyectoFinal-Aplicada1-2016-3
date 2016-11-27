@@ -21,9 +21,10 @@ namespace ProyectoFinal_Aplicada1.Registros.RegistroUsuario
             NombreUsuariotextBox.Enabled = false;
             ContrasenatextBox.Enabled = false;
             RepContratextBox.Enabled = false;
+            BuscarUsbutton.Enabled = false;
+            label1.Enabled = false;
+            label2.Enabled = false;
             label3.Enabled = false;
-            label5.Enabled = false;
-            label7.Enabled = false;
         }
 
         private void CrearUsbutton_Click(object sender, EventArgs e)
@@ -94,11 +95,42 @@ namespace ProyectoFinal_Aplicada1.Registros.RegistroUsuario
             NombreUsuariotextBox.Enabled = true;
             ContrasenatextBox.Enabled = true;
             RepContratextBox.Enabled = true;
+            BuscarUsbutton.Enabled = true;
+            label1.Enabled = true;
+            label2.Enabled = true;
+            label3.Enabled = true;
         }
 
         private void UsuarioIdtextBox_MouseClick(object sender, MouseEventArgs e)
         {
             UsuarioIdtextBox.Clear();
+        }
+
+        private void NombreUsuariotextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            NombreUsuariotextBox.Clear();
+        }
+
+        private void ContrasenatextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            ContrasenatextBox.Clear();
+        }
+
+        private void RepContratextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            RepContratextBox.Clear();
+        }
+
+        private void BuscarUsbutton_Click(object sender, EventArgs e)
+        {
+            int num = Convert.ToInt32(UsuarioIdtextBox.Text);
+            var uS = UsuariosBLL.Buscar(num);
+
+            if(uS != null)
+            {
+                NombreUsuariotextBox.Text = uS.Nombre;
+                ContrasenatextBox.Text = uS.Contrasena;
+            }
         }
     }
     

@@ -37,7 +37,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.RutaAsignadatextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.TipoVehiculocomboBox = new System.Windows.Forms.ComboBox();
@@ -79,11 +78,8 @@
             this.errorProvider13 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.Editarbutton = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.AgregarFotoVendebutton = new System.Windows.Forms.Button();
-            this.EliminarFotoVendebutton = new System.Windows.Forms.Button();
+            this.BuscarVendedorbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -98,17 +94,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider13)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.BuscarVendedorbutton);
             this.panel1.Controls.Add(this.TipoVehiculo2comboBox);
             this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.VehiculoAsignadocomboBox);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
@@ -141,7 +135,7 @@
             this.panel1.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.panel1.Location = new System.Drawing.Point(42, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1191, 660);
+            this.panel1.Size = new System.Drawing.Size(870, 660);
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -208,15 +202,6 @@
             this.RutaAsignadatextBox.Name = "RutaAsignadatextBox";
             this.RutaAsignadatextBox.Size = new System.Drawing.Size(303, 49);
             this.RutaAsignadatextBox.TabIndex = 27;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(911, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(238, 258);
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
             // 
             // DescripciontextBox
             // 
@@ -544,7 +529,7 @@
             this.panel2.Controls.Add(this.Editarbutton);
             this.panel2.Controls.Add(this.Guardarbutton);
             this.panel2.Controls.Add(this.Eliminarbutton);
-            this.panel2.Location = new System.Drawing.Point(155, 708);
+            this.panel2.Location = new System.Drawing.Point(51, 701);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(799, 115);
             this.panel2.TabIndex = 12;
@@ -565,36 +550,18 @@
             this.Editarbutton.UseVisualStyleBackColor = false;
             this.Editarbutton.Click += new System.EventHandler(this.Editarbutton_Click);
             // 
-            // panel3
+            // BuscarVendedorbutton
             // 
-            this.panel3.Controls.Add(this.EliminarFotoVendebutton);
-            this.panel3.Controls.Add(this.AgregarFotoVendebutton);
-            this.panel3.Location = new System.Drawing.Point(845, 288);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(329, 67);
-            this.panel3.TabIndex = 33;
-            // 
-            // AgregarFotoVendebutton
-            // 
-            this.AgregarFotoVendebutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AgregarFotoVendebutton.BackgroundImage")));
-            this.AgregarFotoVendebutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.AgregarFotoVendebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AgregarFotoVendebutton.Location = new System.Drawing.Point(16, 3);
-            this.AgregarFotoVendebutton.Name = "AgregarFotoVendebutton";
-            this.AgregarFotoVendebutton.Size = new System.Drawing.Size(115, 51);
-            this.AgregarFotoVendebutton.TabIndex = 0;
-            this.AgregarFotoVendebutton.UseVisualStyleBackColor = true;
-            // 
-            // EliminarFotoVendebutton
-            // 
-            this.EliminarFotoVendebutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EliminarFotoVendebutton.BackgroundImage")));
-            this.EliminarFotoVendebutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.EliminarFotoVendebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EliminarFotoVendebutton.Location = new System.Drawing.Point(202, 3);
-            this.EliminarFotoVendebutton.Name = "EliminarFotoVendebutton";
-            this.EliminarFotoVendebutton.Size = new System.Drawing.Size(115, 51);
-            this.EliminarFotoVendebutton.TabIndex = 1;
-            this.EliminarFotoVendebutton.UseVisualStyleBackColor = true;
+            this.BuscarVendedorbutton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarVendedorbutton.Image")));
+            this.BuscarVendedorbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BuscarVendedorbutton.Location = new System.Drawing.Point(237, 15);
+            this.BuscarVendedorbutton.Name = "BuscarVendedorbutton";
+            this.BuscarVendedorbutton.Size = new System.Drawing.Size(134, 45);
+            this.BuscarVendedorbutton.TabIndex = 34;
+            this.BuscarVendedorbutton.Text = "Buscar";
+            this.BuscarVendedorbutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BuscarVendedorbutton.UseVisualStyleBackColor = true;
+            this.BuscarVendedorbutton.Click += new System.EventHandler(this.BuscarVendedorbutton_Click);
             // 
             // RegistroVendedor
             // 
@@ -602,7 +569,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1313, 872);
+            this.ClientSize = new System.Drawing.Size(930, 872);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -611,7 +578,6 @@
             this.Text = "RegistroVendedor";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
@@ -626,7 +592,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider13)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -637,7 +602,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox RutaAsignadatextBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox DescripciontextBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox TipoVehiculocomboBox;
@@ -655,11 +619,8 @@
         private System.Windows.Forms.TextBox NombretextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox TipoVehiculo2comboBox;
@@ -682,8 +643,9 @@
         private System.Windows.Forms.ErrorProvider errorProvider13;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button Editarbutton;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button EliminarFotoVendebutton;
-        private System.Windows.Forms.Button AgregarFotoVendebutton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button BuscarVendedorbutton;
     }
 }
