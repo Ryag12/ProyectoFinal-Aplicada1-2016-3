@@ -32,8 +32,10 @@ namespace Entidades
 
         public string VehiculoPropio { get; set; }
 
-        public string VehiculoPropio2 { get; set; }
+        public string VehiculoAsignado { get; set; }
 
-        public string MyProperty { get; set; }
+        public string RutaAsignada { get; set; }
+
+        public string Descripcion { get; set; }
     }
 }

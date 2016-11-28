@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using Entidades;
 using DAL;
+using System.Data.Entity;
+using System.Windows.Forms;
+
 namespace BLL
 {
     public class VendedorBLL
@@ -15,9 +18,12 @@ namespace BLL
             {
                 try
                 {
-
-                    conexion.Vendedor.Add(vendedor);
-
+                    if (Buscar(vendedor.VendedorId) == null)
+                    {
+                        conexion.Vendedor.Add(vendedor);
+                    }
+                    else
+                        conexion.Entry(vendedor).State = EntityState.Modified;
                     conexion.SaveChanges();
 
                     retorno = true;
@@ -28,32 +34,52 @@ namespace BLL
                     throw;
                 }
 
-            return retorno;
+                return retorno;
             }
         }
 
-        public static bool Eliminar(int id)
+        public static void Eliminar(Vendedores vendedor)
         {
-            bool otbner = false;
-            using (var db = new ProyectoFinalDb())
+            using (var conexion = new ProyectoFinalDb())
             {
                 try
                 {
-                    Vendedores vendedor = db.Vendedor.Find(id);
 
-                    db.Vendedor.Remove(vendedor);
-                    db.SaveChanges();
-                    otbner = true;
+                    if (vendedor != null)
+                    {
+                        conexion.Entry(vendedor).State = EntityState.Deleted;
+
+                        conexion.SaveChanges();
+
+                    }
+
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-
+                    MessageBox.Show(e.ToString());
                     throw;
                 }
-                return otbner;
             }
 
-            
+            //bool obtener = false;
+            //using (var conexion = new ProyectoFinalDb())
+            //{
+            //    try
+            //    {
+            //        conexion.Entry(agregado).State = EntityState.Deleted;
+            //        conexion.SaveChanges();
+            //        obtener = true;
+
+            //    }
+            //    catch (Exception)
+            //    {
+
+            //        throw;
+            //    }
+            //    return obtener;
+            //}
+
+
         }
 
         public static Vendedores Buscar(int vendedorId)
@@ -78,11 +104,20 @@ namespace BLL
         {
             List<Vendedores> lista = new List<Vendedores>();
 
-            var db = new ProyectoFinalDb();
+            using (var db = new ProyectoFinalDb())
+            {
+                try
+                {
+                    lista = db.Vendedor.ToList();
+                }
+                catch (Exception)
+                {
 
-            lista = db.Vendedor.ToList();
+                    throw;
+                }
+                return lista;
+            }
 
-            return lista;
         }
 
         public static List<Vendedores> GetLista(int vendedorId)
@@ -95,6 +130,25 @@ namespace BLL
 
             return lista;
         }
+        public static List<Vendedores> GetListNombre(string nombre)
+        {
+
+            List<Vendedores> lista = new List<Vendedores>();
+            using (var conexion = new ProyectoFinalDb())
+            {
+                try
+                {
+                    lista = conexion.Vendedor.Where(n => string.Equals(n.Nombre, nombre)).ToList();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+            return lista;
+        }
+
 
     }
 }

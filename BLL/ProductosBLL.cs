@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using Entidades;
 using DAL;
+using System.Windows.Forms;
+
 namespace BLL
 {
     public class ProductosBLL
@@ -22,10 +24,10 @@ namespace BLL
                     obtener = true;
 
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-
-                    throw;
+                    MessageBox.Show(e.ToString());
+                    //throw;
                 }
             }
             return obtener;
@@ -57,24 +59,22 @@ namespace BLL
             }
         }
 
-        public static bool Buscar(int id)
+        public static Productos Buscar(int ProductoId)
         {
-            bool retornar = false;
+            var producto = new Productos();
             using (var conexion = new ProyectoFinalDb())
             {
                 try
                 {
-
-                    conexion.Productos.Find(id);
-                    retornar = true;
+                    producto = conexion.Productos.Find(ProductoId);
                 }
                 catch (Exception)
                 {
 
                     throw;
                 }
-                return retornar;
             }
+            return producto;
         }
 
         public static List<Productos> GetLista()

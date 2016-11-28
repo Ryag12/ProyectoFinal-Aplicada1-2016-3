@@ -31,34 +31,36 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroVendedor));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TipoVehiculo2comboBox = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.VehiculoAsignadocomboBox = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.MujerradioButton = new System.Windows.Forms.RadioButton();
+            this.HombreradioButton = new System.Windows.Forms.RadioButton();
+            this.VehiculoAsignado = new System.Windows.Forms.GroupBox();
+            this.VasignadonoradioButton = new System.Windows.Forms.RadioButton();
+            this.VasignadoSiradioButton3 = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.VehiculoPnoradioButton = new System.Windows.Forms.RadioButton();
+            this.VehiculoPsiradioButton = new System.Windows.Forms.RadioButton();
+            this.BuscarVendedorbutton = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.RutaAsignadatextBox = new System.Windows.Forms.TextBox();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.TipoVehiculocomboBox = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.VehiculoPropiocomboBox = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.ZonatextBox = new System.Windows.Forms.TextBox();
             this.DirecciontextBox = new System.Windows.Forms.TextBox();
             this.CedulamaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.TelefonoMovilmaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.TelefonoFijomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.SexocomboBox = new System.Windows.Forms.ComboBox();
             this.VendedorIdtextBox = new System.Windows.Forms.TextBox();
             this.ApellidotextBox = new System.Windows.Forms.TextBox();
-            this.NombretextBox = new System.Windows.Forms.TextBox();
+            this.NombreVendedortextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Guardarbutton = new System.Windows.Forms.Button();
@@ -78,8 +80,10 @@
             this.errorProvider13 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.Editarbutton = new System.Windows.Forms.Button();
-            this.BuscarVendedorbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.VehiculoAsignado.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -100,35 +104,30 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.VehiculoAsignado);
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.BuscarVendedorbutton);
-            this.panel1.Controls.Add(this.TipoVehiculo2comboBox);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.VehiculoAsignadocomboBox);
-            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.RutaAsignadatextBox);
             this.panel1.Controls.Add(this.DescripciontextBox);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.TipoVehiculocomboBox);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.VehiculoPropiocomboBox);
-            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.ZonatextBox);
             this.panel1.Controls.Add(this.DirecciontextBox);
             this.panel1.Controls.Add(this.CedulamaskedTextBox);
             this.panel1.Controls.Add(this.TelefonoMovilmaskedTextBox);
             this.panel1.Controls.Add(this.TelefonoFijomaskedTextBox);
-            this.panel1.Controls.Add(this.SexocomboBox);
             this.panel1.Controls.Add(this.VendedorIdtextBox);
             this.panel1.Controls.Add(this.ApellidotextBox);
-            this.panel1.Controls.Add(this.NombretextBox);
+            this.panel1.Controls.Add(this.NombreVendedortextBox);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -139,57 +138,128 @@
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // TipoVehiculo2comboBox
+            // groupBox3
             // 
-            this.TipoVehiculo2comboBox.FormattingEnabled = true;
-            this.TipoVehiculo2comboBox.Items.AddRange(new object[] {
-            "Tipos.",
-            "Automovil Turismo.",
-            "Furgoneta.",
-            "Camioneta.",
-            "Moto."});
-            this.TipoVehiculo2comboBox.Location = new System.Drawing.Point(257, 593);
-            this.TipoVehiculo2comboBox.Name = "TipoVehiculo2comboBox";
-            this.TipoVehiculo2comboBox.Size = new System.Drawing.Size(128, 31);
-            this.TipoVehiculo2comboBox.TabIndex = 32;
+            this.groupBox3.Controls.Add(this.MujerradioButton);
+            this.groupBox3.Controls.Add(this.HombreradioButton);
+            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.groupBox3.Location = new System.Drawing.Point(3, 154);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(308, 70);
+            this.groupBox3.TabIndex = 44;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Sexo";
             // 
-            // label15
+            // MujerradioButton
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(253, 557);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(132, 19);
-            this.label15.TabIndex = 31;
-            this.label15.Text = "Tipo de Vehiculo";
+            this.MujerradioButton.AutoSize = true;
+            this.MujerradioButton.Location = new System.Drawing.Point(140, 39);
+            this.MujerradioButton.Name = "MujerradioButton";
+            this.MujerradioButton.Size = new System.Drawing.Size(82, 26);
+            this.MujerradioButton.TabIndex = 36;
+            this.MujerradioButton.TabStop = true;
+            this.MujerradioButton.Text = "Mujer";
+            this.MujerradioButton.UseVisualStyleBackColor = true;
             // 
-            // VehiculoAsignadocomboBox
+            // HombreradioButton
             // 
-            this.VehiculoAsignadocomboBox.FormattingEnabled = true;
-            this.VehiculoAsignadocomboBox.Items.AddRange(new object[] {
-            "Si",
-            "No"});
-            this.VehiculoAsignadocomboBox.Location = new System.Drawing.Point(3, 593);
-            this.VehiculoAsignadocomboBox.Name = "VehiculoAsignadocomboBox";
-            this.VehiculoAsignadocomboBox.Size = new System.Drawing.Size(129, 31);
-            this.VehiculoAsignadocomboBox.TabIndex = 30;
-            this.VehiculoAsignadocomboBox.Text = "Eliges....";
+            this.HombreradioButton.AutoSize = true;
+            this.HombreradioButton.Location = new System.Drawing.Point(6, 39);
+            this.HombreradioButton.Name = "HombreradioButton";
+            this.HombreradioButton.Size = new System.Drawing.Size(97, 26);
+            this.HombreradioButton.TabIndex = 37;
+            this.HombreradioButton.TabStop = true;
+            this.HombreradioButton.Text = "Hombre";
+            this.HombreradioButton.UseVisualStyleBackColor = true;
             // 
-            // label14
+            // VehiculoAsignado
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 557);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(144, 19);
-            this.label14.TabIndex = 29;
-            this.label14.Text = "Vehiculo Asignado";
+            this.VehiculoAsignado.Controls.Add(this.VasignadonoradioButton);
+            this.VehiculoAsignado.Controls.Add(this.VasignadoSiradioButton3);
+            this.VehiculoAsignado.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.VehiculoAsignado.Location = new System.Drawing.Point(7, 590);
+            this.VehiculoAsignado.Name = "VehiculoAsignado";
+            this.VehiculoAsignado.Size = new System.Drawing.Size(195, 60);
+            this.VehiculoAsignado.TabIndex = 43;
+            this.VehiculoAsignado.TabStop = false;
+            this.VehiculoAsignado.Text = "Vehiculo Asignado";
+            this.VehiculoAsignado.Visible = false;
+            // 
+            // VasignadonoradioButton
+            // 
+            this.VasignadonoradioButton.AutoSize = true;
+            this.VasignadonoradioButton.Location = new System.Drawing.Point(120, 33);
+            this.VasignadonoradioButton.Name = "VasignadonoradioButton";
+            this.VasignadonoradioButton.Size = new System.Drawing.Size(55, 27);
+            this.VasignadonoradioButton.TabIndex = 41;
+            this.VasignadonoradioButton.TabStop = true;
+            this.VasignadonoradioButton.Text = "No";
+            this.VasignadonoradioButton.UseVisualStyleBackColor = true;
+            // 
+            // VasignadoSiradioButton3
+            // 
+            this.VasignadoSiradioButton3.AutoSize = true;
+            this.VasignadoSiradioButton3.Location = new System.Drawing.Point(6, 33);
+            this.VasignadoSiradioButton3.Name = "VasignadoSiradioButton3";
+            this.VasignadoSiradioButton3.Size = new System.Drawing.Size(47, 27);
+            this.VasignadoSiradioButton3.TabIndex = 40;
+            this.VasignadoSiradioButton3.TabStop = true;
+            this.VasignadoSiradioButton3.Text = "Si";
+            this.VasignadoSiradioButton3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.VehiculoPnoradioButton);
+            this.groupBox1.Controls.Add(this.VehiculoPsiradioButton);
+            this.groupBox1.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.groupBox1.Location = new System.Drawing.Point(7, 481);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(195, 57);
+            this.groupBox1.TabIndex = 42;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Vehiculo Propio";
+            // 
+            // VehiculoPnoradioButton
+            // 
+            this.VehiculoPnoradioButton.AutoSize = true;
+            this.VehiculoPnoradioButton.Location = new System.Drawing.Point(80, 24);
+            this.VehiculoPnoradioButton.Name = "VehiculoPnoradioButton";
+            this.VehiculoPnoradioButton.Size = new System.Drawing.Size(55, 27);
+            this.VehiculoPnoradioButton.TabIndex = 39;
+            this.VehiculoPnoradioButton.TabStop = true;
+            this.VehiculoPnoradioButton.Text = "No";
+            this.VehiculoPnoradioButton.UseVisualStyleBackColor = true;
+            // 
+            // VehiculoPsiradioButton
+            // 
+            this.VehiculoPsiradioButton.AutoSize = true;
+            this.VehiculoPsiradioButton.Location = new System.Drawing.Point(6, 24);
+            this.VehiculoPsiradioButton.Name = "VehiculoPsiradioButton";
+            this.VehiculoPsiradioButton.Size = new System.Drawing.Size(47, 27);
+            this.VehiculoPsiradioButton.TabIndex = 38;
+            this.VehiculoPsiradioButton.TabStop = true;
+            this.VehiculoPsiradioButton.Text = "Si";
+            this.VehiculoPsiradioButton.UseVisualStyleBackColor = true;
+            // 
+            // BuscarVendedorbutton
+            // 
+            this.BuscarVendedorbutton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarVendedorbutton.Image")));
+            this.BuscarVendedorbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BuscarVendedorbutton.Location = new System.Drawing.Point(237, 15);
+            this.BuscarVendedorbutton.Name = "BuscarVendedorbutton";
+            this.BuscarVendedorbutton.Size = new System.Drawing.Size(134, 45);
+            this.BuscarVendedorbutton.TabIndex = 34;
+            this.BuscarVendedorbutton.Text = "Buscar";
+            this.BuscarVendedorbutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BuscarVendedorbutton.UseVisualStyleBackColor = true;
+            this.BuscarVendedorbutton.Click += new System.EventHandler(this.BuscarVendedorbutton_Click);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(506, 557);
+            this.label13.Location = new System.Drawing.Point(521, 557);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(114, 19);
             this.label13.TabIndex = 28;
@@ -224,49 +294,20 @@
             // TipoVehiculocomboBox
             // 
             this.TipoVehiculocomboBox.FormattingEnabled = true;
-            this.TipoVehiculocomboBox.Items.AddRange(new object[] {
-            "Tipos.",
-            "Automovil Turismo.",
-            "Furgoneta.",
-            "Camioneta.",
-            "Moto."});
-            this.TipoVehiculocomboBox.Location = new System.Drawing.Point(257, 497);
+            this.TipoVehiculocomboBox.Location = new System.Drawing.Point(267, 524);
             this.TipoVehiculocomboBox.Name = "TipoVehiculocomboBox";
-            this.TipoVehiculocomboBox.Size = new System.Drawing.Size(128, 31);
+            this.TipoVehiculocomboBox.Size = new System.Drawing.Size(179, 31);
             this.TipoVehiculocomboBox.TabIndex = 23;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(253, 459);
+            this.label11.Location = new System.Drawing.Point(284, 481);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(132, 19);
             this.label11.TabIndex = 22;
             this.label11.Text = "Tipo de Vehiculo";
-            // 
-            // VehiculoPropiocomboBox
-            // 
-            this.VehiculoPropiocomboBox.FormattingEnabled = true;
-            this.VehiculoPropiocomboBox.Items.AddRange(new object[] {
-            "Si",
-            "No"});
-            this.VehiculoPropiocomboBox.Location = new System.Drawing.Point(3, 497);
-            this.VehiculoPropiocomboBox.Name = "VehiculoPropiocomboBox";
-            this.VehiculoPropiocomboBox.Size = new System.Drawing.Size(129, 31);
-            this.VehiculoPropiocomboBox.TabIndex = 21;
-            this.VehiculoPropiocomboBox.Text = "Eliges....";
-            this.VehiculoPropiocomboBox.SelectedIndexChanged += new System.EventHandler(this.VehiculoPropiocomboBox_SelectedIndexChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 459);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(129, 19);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Vehiculo Propio";
             // 
             // ZonatextBox
             // 
@@ -310,18 +351,6 @@
             this.TelefonoFijomaskedTextBox.TabIndex = 15;
             this.TelefonoFijomaskedTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TelefonoFijomaskedTextBox_KeyPress);
             // 
-            // SexocomboBox
-            // 
-            this.SexocomboBox.FormattingEnabled = true;
-            this.SexocomboBox.Items.AddRange(new object[] {
-            "Eliges....",
-            "Hombre",
-            "Mujer"});
-            this.SexocomboBox.Location = new System.Drawing.Point(7, 192);
-            this.SexocomboBox.Name = "SexocomboBox";
-            this.SexocomboBox.Size = new System.Drawing.Size(304, 31);
-            this.SexocomboBox.TabIndex = 13;
-            // 
             // VendedorIdtextBox
             // 
             this.VendedorIdtextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -330,6 +359,7 @@
             this.VendedorIdtextBox.Name = "VendedorIdtextBox";
             this.VendedorIdtextBox.Size = new System.Drawing.Size(82, 35);
             this.VendedorIdtextBox.TabIndex = 12;
+            this.VendedorIdtextBox.TextChanged += new System.EventHandler(this.VendedorIdtextBox_TextChanged);
             this.VendedorIdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.VendedorIdtextBox_KeyPress);
             // 
             // ApellidotextBox
@@ -340,14 +370,14 @@
             this.ApellidotextBox.TabIndex = 11;
             this.ApellidotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ApellidotextBox_KeyPress);
             // 
-            // NombretextBox
+            // NombreVendedortextBox
             // 
-            this.NombretextBox.Location = new System.Drawing.Point(3, 108);
-            this.NombretextBox.Name = "NombretextBox";
-            this.NombretextBox.Size = new System.Drawing.Size(308, 30);
-            this.NombretextBox.TabIndex = 10;
-            this.NombretextBox.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
-            this.NombretextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombretextBox_KeyPress);
+            this.NombreVendedortextBox.Location = new System.Drawing.Point(3, 108);
+            this.NombreVendedortextBox.Name = "NombreVendedortextBox";
+            this.NombreVendedortextBox.Size = new System.Drawing.Size(308, 30);
+            this.NombreVendedortextBox.TabIndex = 10;
+            this.NombreVendedortextBox.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
+            this.NombreVendedortextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombretextBox_KeyPress);
             // 
             // label1
             // 
@@ -409,16 +439,6 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Telefono Movil";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 154);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 19);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Sexo";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -446,14 +466,14 @@
             this.Guardarbutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardarbutton.Location = new System.Drawing.Point(27, 16);
+            this.Guardarbutton.Location = new System.Drawing.Point(288, 16);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(186, 72);
             this.Guardarbutton.TabIndex = 12;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Guardarbutton.UseVisualStyleBackColor = false;
-            this.Guardarbutton.Click += new System.EventHandler(this.button2_Click);
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Eliminarbutton
             // 
@@ -469,6 +489,7 @@
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Eliminarbutton.UseVisualStyleBackColor = false;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // errorProvider1
             // 
@@ -531,7 +552,7 @@
             this.panel2.Controls.Add(this.Eliminarbutton);
             this.panel2.Location = new System.Drawing.Point(51, 701);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(799, 115);
+            this.panel2.Size = new System.Drawing.Size(867, 115);
             this.panel2.TabIndex = 12;
             // 
             // Editarbutton
@@ -541,7 +562,7 @@
             this.Editarbutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Editarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Editarbutton.Image")));
             this.Editarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Editarbutton.Location = new System.Drawing.Point(301, 16);
+            this.Editarbutton.Location = new System.Drawing.Point(21, 16);
             this.Editarbutton.Name = "Editarbutton";
             this.Editarbutton.Size = new System.Drawing.Size(172, 72);
             this.Editarbutton.TabIndex = 15;
@@ -549,19 +570,6 @@
             this.Editarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Editarbutton.UseVisualStyleBackColor = false;
             this.Editarbutton.Click += new System.EventHandler(this.Editarbutton_Click);
-            // 
-            // BuscarVendedorbutton
-            // 
-            this.BuscarVendedorbutton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarVendedorbutton.Image")));
-            this.BuscarVendedorbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BuscarVendedorbutton.Location = new System.Drawing.Point(237, 15);
-            this.BuscarVendedorbutton.Name = "BuscarVendedorbutton";
-            this.BuscarVendedorbutton.Size = new System.Drawing.Size(134, 45);
-            this.BuscarVendedorbutton.TabIndex = 34;
-            this.BuscarVendedorbutton.Text = "Buscar";
-            this.BuscarVendedorbutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BuscarVendedorbutton.UseVisualStyleBackColor = true;
-            this.BuscarVendedorbutton.Click += new System.EventHandler(this.BuscarVendedorbutton_Click);
             // 
             // RegistroVendedor
             // 
@@ -578,6 +586,12 @@
             this.Text = "RegistroVendedor";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.VehiculoAsignado.ResumeLayout(false);
+            this.VehiculoAsignado.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
@@ -599,33 +613,26 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox RutaAsignadatextBox;
         private System.Windows.Forms.TextBox DescripciontextBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox TipoVehiculocomboBox;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox VehiculoPropiocomboBox;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox ZonatextBox;
         private System.Windows.Forms.TextBox DirecciontextBox;
         private System.Windows.Forms.MaskedTextBox CedulamaskedTextBox;
         private System.Windows.Forms.MaskedTextBox TelefonoMovilmaskedTextBox;
         private System.Windows.Forms.MaskedTextBox TelefonoFijomaskedTextBox;
-        private System.Windows.Forms.ComboBox SexocomboBox;
         private System.Windows.Forms.TextBox VendedorIdtextBox;
         private System.Windows.Forms.TextBox ApellidotextBox;
-        private System.Windows.Forms.TextBox NombretextBox;
+        private System.Windows.Forms.TextBox NombreVendedortextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox TipoVehiculo2comboBox;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox VehiculoAsignadocomboBox;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.ErrorProvider errorProvider1;
@@ -645,7 +652,15 @@
         private System.Windows.Forms.Button Editarbutton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BuscarVendedorbutton;
+        private System.Windows.Forms.RadioButton HombreradioButton;
+        private System.Windows.Forms.RadioButton MujerradioButton;
+        private System.Windows.Forms.RadioButton VasignadonoradioButton;
+        private System.Windows.Forms.RadioButton VasignadoSiradioButton3;
+        private System.Windows.Forms.RadioButton VehiculoPnoradioButton;
+        private System.Windows.Forms.RadioButton VehiculoPsiradioButton;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox VehiculoAsignado;
     }
 }

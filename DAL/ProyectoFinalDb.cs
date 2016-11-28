@@ -13,11 +13,13 @@ namespace DAL
         {
 
         }
-        public DbSet<Vendedores> Vendedor { get; set; }
+        public virtual DbSet<Vendedores> Vendedor { get; set; }
 
-        public DbSet <Usuarios> Usuario { get; set; }
+        public virtual DbSet <Usuarios> Usuario { get; set; }
 
-        public DbSet<Productos> Productos { get; set; }
+        public virtual DbSet<Productos> Productos { get; set; }
+
+        public virtual DbSet<TiposVehiculos> TiposVehiculos { get; set; }
 
     }
 }
