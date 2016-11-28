@@ -28,10 +28,10 @@ namespace BLL
 
                     retorno = true;
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
 
-                    throw;
+                    MessageBox.Show(e.ToString());
                 }
 
                 return retorno;
@@ -60,25 +60,6 @@ namespace BLL
                     throw;
                 }
             }
-
-            //bool obtener = false;
-            //using (var conexion = new ProyectoFinalDb())
-            //{
-            //    try
-            //    {
-            //        conexion.Entry(agregado).State = EntityState.Deleted;
-            //        conexion.SaveChanges();
-            //        obtener = true;
-
-            //    }
-            //    catch (Exception)
-            //    {
-
-            //        throw;
-            //    }
-            //    return obtener;
-            //}
-
 
         }
 
@@ -148,7 +129,6 @@ namespace BLL
             }
             return lista;
         }
-
 
     }
 }

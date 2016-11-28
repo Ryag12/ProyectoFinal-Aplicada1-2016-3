@@ -585,6 +585,7 @@
             this.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.Name = "RegistroVendedor";
             this.Text = "RegistroVendedor";
+            this.Load += new System.EventHandler(this.RegistroVendedor_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox3.ResumeLayout(false);

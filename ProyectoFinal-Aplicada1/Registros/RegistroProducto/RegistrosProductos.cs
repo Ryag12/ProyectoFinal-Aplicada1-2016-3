@@ -13,7 +13,7 @@ namespace ProyectoFinal_Aplicada1.RegistroProducto
     public partial class RegistrosProductos : Form
     {
         private List<Proveedores> prove;
-        List<Productos> lista = null;
+        //List<Productos> lista = null;
         public RegistrosProductos()
         {
             InitializeComponent();
@@ -76,34 +76,59 @@ namespace ProyectoFinal_Aplicada1.RegistroProducto
             {
                 MessageBox.Show("Este Id no pertenece a ningun producto  " + Convert.ToInt32(ProductoIdtextBox.Text), "Error en la consulta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }        
+        }
 
         private void Registrarbutton_Click(object sender, EventArgs e)
         {
-            Productos produc = new Productos();
+            Productos producto = new Productos();
 
-            produc = LLenarFormulario();
-
-            if(ProductosBLL.Insertar(produc))
+            producto = LLenarFormulario();
+            if(CompletarProducto() != null)
             {
-                MessageBox.Show("Producto agregado");
+                MessageBox.Show("Todos los campos deben estar lleno");
+            }
+            else if(ProductosBLL.Insertar(producto))
+            {
+                MessageBox.Show("EL producto se agrego exitosamente");
             }
         }
 
-        //private Productos CompletarFormulario()
-        //{
-        //    Productos pr = new Productos();
-        //    pr.productoId = Utilidades.ToInt(ProductoIdtextBox.Text);
-        //    pr.productoId = Utilidades.ToInt(PrecioProdtextBox.Text);
-        //    pr.productoId = Utilidades.ToInt(UnidadTextBox2.Text);
-        //    pr.Nombre = NombretextBox.Text;
-        //    pr.Marca = MarcatextBox.Text;
-        //    pr.Descripcion = DescripcionProtextBox.Text;
-        //    pr.Direccion = DireccionProductotextBox.Text;
-        //    pr.Pais = PaisProductotextBox.Text;
-        //    return pr;
-            
-        //}
+        public Productos CompletarProducto()
+        {
+            Productos productor = null;
+            string mensaje = "----!!Este campo debe estar lleno!!---";
+            if (ProductoIdtextBox.Text != string.Empty)
+            {
+                if (NombretextBox.Text != string.Empty)
+                {
+
+                    Productos pr = new Productos();
+                    pr.productoId = Utilidades.ToInt(ProductoIdtextBox.Text);
+                    pr.productoId = Utilidades.ToInt(PrecioProdtextBox.Text);
+                    pr.productoId = Utilidades.ToInt(UnidadTextBox2.Text);
+                    pr.Nombre = NombretextBox.Text;
+                    pr.Marca = MarcatextBox.Text;
+                    pr.Descripcion = DescripcionProtextBox.Text;
+                    pr.Direccion = DireccionProductotextBox.Text;
+                    pr.Pais = PaisProductotextBox.Text;
+                }
+                else
+                {
+                    CampoObligatorioerrorProvider.SetError(NombretextBox, mensaje);
+                    NombretextBox.Focus();
+                }
+            }
+
+
+            else
+            {
+                CampoObligatorioerrorProvider.SetError(ProductoIdtextBox, mensaje);
+                ProductoIdtextBox.Focus();
+            }
+
+
+            return productor;
+        }
 
         public void LlenaComboboxProveedor()
         {
@@ -161,7 +186,7 @@ namespace ProyectoFinal_Aplicada1.RegistroProducto
 
         private void RegistrosProductos_Load(object sender, EventArgs e)
         {
-            
+
             //this.reportViewer1.RefreshReport();
         }
 
@@ -173,3 +198,4 @@ namespace ProyectoFinal_Aplicada1.RegistroProducto
         }
     }
 }
+

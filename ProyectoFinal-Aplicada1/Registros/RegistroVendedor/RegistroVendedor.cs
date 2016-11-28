@@ -263,5 +263,10 @@ namespace ProyectoFinal_Aplicada1.RegistroVendedor
         {
 
         }
+
+        private void RegistroVendedor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

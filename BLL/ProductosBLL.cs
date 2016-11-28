@@ -18,8 +18,12 @@ namespace BLL
             {
                 try
                 {
-                    conexion.Productos.Add(productos);
-
+                    if (Buscar(productos.productoId) == null)
+                    {
+                        conexion.Producto.Add(productos);
+                    }
+                    else
+                        conexion.Entry(productos).State = EntityState.Modified;
                     conexion.SaveChanges();
 
                     obtener = true;
@@ -30,8 +34,9 @@ namespace BLL
                     MessageBox.Show(e.ToString());
                     //throw;
                 }
+                return obtener;
             }
-            return obtener;
+           
         }
 
         public static void Eliminar(Productos productos)
@@ -56,7 +61,6 @@ namespace BLL
                     throw;
                 }
             }
-
         }
 
         public static Productos Buscar(int productoId)
@@ -66,7 +70,7 @@ namespace BLL
             {
                 try
                 {
-                    producto = conexion.Productos.Find(productoId);
+                    producto = conexion.Producto.Find(productoId);
                 }
                 catch (Exception)
                 {
@@ -81,11 +85,19 @@ namespace BLL
         {
             List<Productos> lista = new List<Productos>();
 
-            var db = new ProyectoFinalDb();
+            using (var conexion =new  ProyectoFinalDb())
+            {
+                try
+                {
+                    lista = conexion.Producto.ToList();
+                }
+                catch (Exception)
+                {
 
-            lista = db.Productos.ToList();
-
-            return lista;
+                    throw;
+                }
+                return lista;
+            }
         }
 
         public static List<Productos> GetLista(int idProducto)
@@ -96,7 +108,7 @@ namespace BLL
             {
                 try
                 {
-                    lista = conexion.Productos.Where(p => p.productoId == idProducto).ToList();
+                    lista = conexion.Producto.Where(p => p.productoId == idProducto).ToList();
                 }
                 catch (Exception)
                 {

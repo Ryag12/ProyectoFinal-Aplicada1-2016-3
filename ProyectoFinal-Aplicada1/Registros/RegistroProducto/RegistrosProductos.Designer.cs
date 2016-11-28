@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrosProductos));
             this.MarcatextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,8 +49,10 @@
             this.Registrarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.CampoObligatorioerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CampoObligatorioerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // MarcatextBox
@@ -135,7 +138,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackColor = System.Drawing.Color.OldLace;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.PrecioProdtextBox);
             this.panel2.Controls.Add(this.UnidadTextBox2);
@@ -152,7 +155,7 @@
             this.panel2.Controls.Add(this.DescripcionProtextBox);
             this.panel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.panel2.Location = new System.Drawing.Point(12, 53);
+            this.panel2.Location = new System.Drawing.Point(10, 53);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(794, 806);
             this.panel2.TabIndex = 12;
@@ -291,18 +294,22 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("AR BERKLEY", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label1.Location = new System.Drawing.Point(308, -6);
+            this.label1.Location = new System.Drawing.Point(346, -6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 56);
             this.label1.TabIndex = 14;
             this.label1.Text = "Registros";
+            // 
+            // CampoObligatorioerrorProvider
+            // 
+            this.CampoObligatorioerrorProvider.ContainerControl = this;
             // 
             // RegistrosProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(816, 1005);
+            this.ClientSize = new System.Drawing.Size(828, 1005);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -313,6 +320,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CampoObligatorioerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,5 +346,6 @@
         private System.Windows.Forms.TextBox DireccionProductotextBox;
         private System.Windows.Forms.TextBox UnidadTextBox2;
         private System.Windows.Forms.TextBox PrecioProdtextBox;
+        private System.Windows.Forms.ErrorProvider CampoObligatorioerrorProvider;
     }
 }

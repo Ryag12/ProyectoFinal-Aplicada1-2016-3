@@ -122,7 +122,6 @@
     <Compile Include="Registros\RegistroUsuario\RegistrosUsuarios.Designer.cs">
       <DependentUpon>RegistrosUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registros\RegistroVendedor\RegistroVendedor1.cs" />
     <Compile Include="Registros\RegistroVendedor\RegistroVendedor.cs">
       <SubType>Form</SubType>
     </Compile>

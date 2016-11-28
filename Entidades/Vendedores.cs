@@ -10,6 +10,8 @@ namespace Entidades
    public class Vendedores
     {
         [Key]
+
+        
         public int VendedorId { get; set; }
 
         public string Nombre { get; set; }
@@ -37,5 +39,10 @@ namespace Entidades
         public string RutaAsignada { get; set; }
 
         public string Descripcion { get; set; }
+        
+        public Vendedores()
+        {
+
+        }
     }
 }

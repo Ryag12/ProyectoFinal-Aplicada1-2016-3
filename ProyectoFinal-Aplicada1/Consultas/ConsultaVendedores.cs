@@ -15,33 +15,43 @@ namespace ProyectoFinal_Aplicada1.Consultar
         public ConsultaVendedores()
         {
             InitializeComponent();
+            DesdedateTimePicker.Value = HastadateTimePicker.Value = DateTime.Now;
         }
-        public List<Vendedores> lista = new List<Vendedores>();
-
+        
         private void ConsultaVendedores_Load(object sender, EventArgs e)
         {
 
         }
+        private void CargarVendedores()
+        {
+            while (true)
+            {
+                var lista = BLL.VendedorBLL.GetLista();
+                if (lista.Count() <= 0)
+                {
+                    MessageBox.Show("Debe de Ingresar al menos un 'VENDEDOR'");
 
+                }
+                else
+                {
+                    FiltrarVendedorcomboBox.DataSource = lista;
+                    FiltrarVendedorcomboBox.ValueMember = "VendedorId";
+                    FiltrarVendedorcomboBox.DisplayMember = "Nombre";
+                    break;
+                }
+            }
+        }
         private void BuscarConsultabutton_Click(object sender, EventArgs e)
         {
-
-            if (!String.IsNullOrEmpty(FiltrartextBox.Text))
-            {
-
-                lista = BLL.VendedorBLL.GetLista(Utilidades.ToInt(FiltrartextBox.Text));
-            }
-            else
-            {
-                lista = BLL.VendedorBLL.GetLista();
-            }
-
+            var lista = BLL.VendedorBLL.GetLista(Convert.ToInt32(FiltrarVendedorcomboBox.Text));
+            TblConsudataGridView.DataSource = null;
             TblConsudataGridView.DataSource = lista;
         }
-
         private void TblConsudataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+      
     }
 }
