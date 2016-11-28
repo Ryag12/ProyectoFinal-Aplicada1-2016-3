@@ -258,5 +258,10 @@ namespace ProyectoFinal_Aplicada1.RegistroVendedor
             TipoVehiculocomboBox.ValueMember = "Nombres";
             TipoVehiculocomboBox.DisplayMember = " TiposVehiculosId";
         }
+
+        private void TipoVehiculocomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

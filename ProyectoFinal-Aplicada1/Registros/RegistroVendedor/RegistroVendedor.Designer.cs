@@ -298,6 +298,7 @@
             this.TipoVehiculocomboBox.Name = "TipoVehiculocomboBox";
             this.TipoVehiculocomboBox.Size = new System.Drawing.Size(179, 31);
             this.TipoVehiculocomboBox.TabIndex = 23;
+            this.TipoVehiculocomboBox.SelectedIndexChanged += new System.EventHandler(this.TipoVehiculocomboBox_SelectedIndexChanged);
             // 
             // label11
             // 

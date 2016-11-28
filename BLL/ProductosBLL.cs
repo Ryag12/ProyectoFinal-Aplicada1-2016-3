@@ -5,6 +5,7 @@ using System.Text;
 using Entidades;
 using DAL;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace BLL
 {
@@ -33,40 +34,39 @@ namespace BLL
             return obtener;
         }
 
-        public static bool Eliminar(int id)
+        public static void Eliminar(Productos productos)
         {
-            bool retornar = false;
             using (var conexion = new ProyectoFinalDb())
             {
-
                 try
                 {
-                    Productos productos = conexion.Productos.Find(id);
 
-                    conexion.Productos.Remove(productos);
+                    if (productos != null)
+                    {
+                        conexion.Entry(productos).State = EntityState.Deleted;
 
-                    conexion.SaveChanges();
+                        conexion.SaveChanges();
 
-                    retornar = true;
+                    }
+
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-
+                    MessageBox.Show(e.ToString());
                     throw;
                 }
-
-                return retornar;
             }
+
         }
 
-        public static Productos Buscar(int ProductoId)
+        public static Productos Buscar(int productoId)
         {
             var producto = new Productos();
             using (var conexion = new ProyectoFinalDb())
             {
                 try
                 {
-                    producto = conexion.Productos.Find(ProductoId);
+                    producto = conexion.Productos.Find(productoId);
                 }
                 catch (Exception)
                 {
@@ -92,9 +92,18 @@ namespace BLL
         {
             List<Productos> lista = new List<Productos>();
 
-            var db = new ProyectoFinalDb();
+            using (var conexion = new ProyectoFinalDb())
+            {
+                try
+                {
+                    lista = conexion.Productos.Where(p => p.productoId == idProducto).ToList();
+                }
+                catch (Exception)
+                {
 
-            lista = db.Productos.Where(p => p.productoId == idProducto).ToList();
+                    throw;
+                }
+            }
 
             return lista;
         }

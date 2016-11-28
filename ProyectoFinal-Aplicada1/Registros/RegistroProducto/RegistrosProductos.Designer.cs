@@ -78,6 +78,7 @@
             // 
             // ProveedorProductoscomboBox
             // 
+            this.ProveedorProductoscomboBox.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.ProveedorProductoscomboBox.FormattingEnabled = true;
             this.ProveedorProductoscomboBox.Location = new System.Drawing.Point(235, 217);
             this.ProveedorProductoscomboBox.Name = "ProveedorProductoscomboBox";
@@ -283,6 +284,7 @@
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Eliminarbutton.UseVisualStyleBackColor = false;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // label1
             // 
@@ -307,6 +309,7 @@
             this.Name = "RegistrosProductos";
             this.Text = "RegistrosProductos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.RegistrosProductos_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);

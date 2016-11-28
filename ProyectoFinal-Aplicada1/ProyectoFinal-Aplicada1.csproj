@@ -55,10 +55,13 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -126,6 +129,12 @@
     <Compile Include="Registros\RegistroVendedor\RegistroVendedor.Designer.cs">
       <DependentUpon>RegistroVendedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\VentanaReportes\Vendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\VentanaReportes\Vendedores.Designer.cs">
+      <DependentUpon>Vendedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades.cs" />
     <Compile Include="ValidacionLetrayNumero.cs" />
     <EmbeddedResource Include="Consultas\ConsultaProducto.resx">
@@ -164,9 +173,16 @@
     <EmbeddedResource Include="Registros\RegistroVendedor\RegistroVendedor.resx">
       <DependentUpon>RegistroVendedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\VentanaReportes\Vendedores.resx">
+      <DependentUpon>Vendedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteVendedores.rdlc" />
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Entidades.Productos.datasource" />
+    <None Include="Properties\DataSources\Entidades.TiposVehiculos.datasource" />
     <None Include="Properties\DataSources\Entidades.Usuarios.datasource" />
+    <None Include="Properties\DataSources\Entidades.Vendedores.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

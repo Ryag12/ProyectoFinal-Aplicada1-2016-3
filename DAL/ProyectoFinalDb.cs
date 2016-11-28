@@ -21,5 +21,7 @@ namespace DAL
 
         public virtual DbSet<TiposVehiculos> TiposVehiculos { get; set; }
 
+        public virtual DbSet<Proveedores> Proveedores { get; set; }
+
     }
 }
