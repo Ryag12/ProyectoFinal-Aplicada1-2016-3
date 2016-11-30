@@ -18,7 +18,7 @@ namespace BLL
             {
                 try
                 {
-                    if (Buscar(productos.productoId) == null)
+                    if (Buscar(productos.IdProducto) == null)
                     {
                         conexion.Producto.Add(productos);
                     }
@@ -38,7 +38,6 @@ namespace BLL
             }
 
         }
-
         public static void Eliminar(Productos productos)
         {
             using (var conexion = new ProyectoFinalDb())
@@ -62,7 +61,6 @@ namespace BLL
                 }
             }
         }
-
         public static Productos Buscar(int productoId)
         {
             var producto = new Productos();
@@ -80,7 +78,6 @@ namespace BLL
             }
             return producto;
         }
-
         public static List<Productos> GetLista()
         {
             List<Productos> lista = new List<Productos>();
@@ -108,7 +105,7 @@ namespace BLL
             {
                 try
                 {
-                    lista = conexion.Producto.Where(p => p.productoId == idProducto).ToList();
+                    lista = conexion.Producto.Where(p => p.IdProducto == idProducto).ToList();
                 }
                 catch (Exception)
                 {
@@ -126,7 +123,7 @@ namespace BLL
             {
                 try
                 {
-                    Productos p = conexion.Producto.Where(prod => prod.productoId == productoId).FirstOrDefault();
+                    Productos p = conexion.Producto.Where(prod => prod.IdProducto == productoId).FirstOrDefault();
                     precio = p.Precio;
                 }
                 catch (Exception e)
@@ -137,6 +134,41 @@ namespace BLL
                 return precio;
             }
         }
+        public static List<Productos> ListaCombo()
+        {
+            List<Productos> lista = null;
+            using (var conexion = new ProyectoFinalDb())
+            {
+                try
+                {
+                    lista = conexion.Producto.Where(p => p.Cantidad <= 0 && p.Total <= 0).ToList();
+                }
+                catch (Exception)
+                {
 
+                    throw;
+                }
+            }
+            return lista;
+        }
+        public static List<Productos> Productos(int facturaId)
+        {
+            var producto = new List<Productos>();
+            using (var conexion = new ProyectoFinalDb())
+            {
+                try
+                {
+                    var factura = BLL.FacturasBLL.Buscar(facturaId);
+                    if(factura != null)
+                        producto = factura.Productos;
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+            return producto;
+        }
     }
 }

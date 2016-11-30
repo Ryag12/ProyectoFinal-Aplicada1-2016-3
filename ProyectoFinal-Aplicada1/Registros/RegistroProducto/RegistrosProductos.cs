@@ -110,15 +110,15 @@ namespace ProyectoFinal_Aplicada1.RegistroProducto
                 {
 
                     Productos pr = new Productos();
-                    pr.productoId = Utilidades.ToInt(ProductoIdtextBox.Text);
-                    pr.productoId = Utilidades.ToInt(PrecioProdtextBox.Text);
-                    pr.productoId = Utilidades.ToInt(UnidadTextBox2.Text);
+                    pr.IdProducto = Utilidades.ToInt(ProductoIdtextBox.Text);
+                    pr.IdProducto = Utilidades.ToInt(PrecioProdtextBox.Text);
+                    pr.IdProducto = Utilidades.ToInt(UnidadTextBox2.Text);
                     pr.Nombre = NombretextBox.Text;
                     pr.Marca = MarcatextBox.Text;
                     pr.Descripcion = DescripcionProtextBox.Text;
                     pr.Direccion = DireccionProductotextBox.Text;
                     pr.Pais = PaisProductotextBox.Text;
-                    pr.productoId = 0;
+                   // pr.IdProducto;
                 }
                 else
                 {
@@ -165,7 +165,7 @@ namespace ProyectoFinal_Aplicada1.RegistroProducto
         private Productos LLenarFormulario()
         {
             Productos Prod = new Productos();
-            Prod.productoId = Utilidades.ToInt(ProductoIdtextBox.Text);
+            Prod.IdProducto = Utilidades.ToInt(ProductoIdtextBox.Text);
             Prod.Unidad = Utilidades.ToInt(UnidadTextBox2.Text);
             Prod.Precio = Utilidades.ToInt(PrecioProdtextBox.Text);
             Prod.Nombre = NombretextBox.Text;
@@ -173,7 +173,7 @@ namespace ProyectoFinal_Aplicada1.RegistroProducto
             Prod.Descripcion = DescripcionProtextBox.Text;
             Prod.Direccion = DireccionProductotextBox.Text;
             Prod.Pais = PaisProductotextBox.Text;
-            Prod.productoId = 0;
+            //.IdProducto = 0;
             return Prod;
 
         }

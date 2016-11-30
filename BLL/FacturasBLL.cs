@@ -27,8 +27,53 @@ namespace BLL
                     MessageBox.Show(e.ToString());
                     throw;
                 }
+                return resultado;
             }
-            return resultado;
         }
+
+        public static Facturas Buscar(int facturaId)
+        {
+            Facturas factura = null;
+            using (var conexion = new ProyectoFinalDb())
+            {
+                try
+                {
+                    factura = conexion.Factura.Find(facturaId);
+                    if (factura != null)
+                        factura.Productos.Count();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+            return factura;
+        }
+        public static void Eliminar(Facturas factura)
+        {
+            using (var conexion = new ProyectoFinalDb())
+            {
+                try
+                {
+
+                    if (factura != null)
+                    {
+                        conexion.Entry(factura).State = EntityState.Deleted;
+
+                        conexion.SaveChanges();
+
+                    }
+
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.ToString());
+                    throw;
+                }
+            }
+
+        }
+
     }
 }

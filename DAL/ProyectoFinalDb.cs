@@ -1,21 +1,22 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
-using Entidades;
-using System.Data.Entity;
 
 namespace DAL
 {
-     public class ProyectoFinalDb : DbContext
+    public class ProyectoFinalDb : DbContext
     {
-        public ProyectoFinalDb() : base("name = ConStr")
+        public ProyectoFinalDb() : base("name=ConStr")
         {
-
+                
         }
+
         public virtual DbSet<Vendedores> Vendedor { get; set; }
 
-        public virtual DbSet <Usuarios> Usuario { get; set; }
+        public virtual DbSet<Usuarios> Usuario { get; set; }
 
         public virtual DbSet<Productos> Producto { get; set; }
 
@@ -29,13 +30,13 @@ namespace DAL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Facturas>()
-                .HasMany<VentasProductos>(f => f.ventas)
-                .WithMany(v => v.Facturas)
-                .Map(DF =>
+                .HasMany<Productos>(f => f.Productos)
+                .WithMany(p=> p.Facturas)
+                .Map(Vp=>
                 {
-                    DF.MapLeftKey("FacturaId");
-                    DF.MapRightKey("VentaProductoId");
-                    DF.ToTable("DetalleFacturas");
+                    Vp.MapLeftKey("FacturaId");
+                    Vp.MapRightKey("IdProducto");
+                    Vp.ToTable("FacturasProductos");
                 });
         }
     }

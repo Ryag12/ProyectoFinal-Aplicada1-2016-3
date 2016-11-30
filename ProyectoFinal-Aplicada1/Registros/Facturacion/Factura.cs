@@ -48,7 +48,7 @@ namespace ProyectoFinal_Aplicada1.Registros.Facturacion
         {
             while (true)
             {
-                var lista = BLL.ProductosBLL.GetLista();
+                var lista = BLL.ProductosBLL.ListaCombo();
                 if (lista.Count <= 0)
                 {
                     var ventana = new RegistroProducto.RegistrosProductos();
@@ -58,7 +58,7 @@ namespace ProyectoFinal_Aplicada1.Registros.Facturacion
                 {
                     ElegirProductocomboBox.DataSource = null;
                     ElegirProductocomboBox.DataSource = lista;
-                    ElegirProductocomboBox.ValueMember = "ProductoId";
+                    ElegirProductocomboBox.ValueMember = "IdProducto";
                     ElegirProductocomboBox.DisplayMember = "Nombre";
                     break;
                 }
@@ -66,17 +66,18 @@ namespace ProyectoFinal_Aplicada1.Registros.Facturacion
         }
         private void NuevoDetallebutton_Click(object sender, EventArgs e)
         {
-
+            LimpiarCampos();
         }
 
         private void GuardarDetallebutton_Click(object sender, EventArgs e)
         {
             factura.Fecha = FechadateTimePicker.Value;
             factura.Vendedor = ElegirVendedorcomboBox.Text;
-            factura.Unidad = factura.ventas.Count();
+            factura.Unidad = factura.Productos.Count();
             if (BLL.FacturasBLL.Insertar(factura))
             {
                 MessageBox.Show("Guardo");
+                LimpiarCampos();
             }
         }
 
@@ -88,7 +89,7 @@ namespace ProyectoFinal_Aplicada1.Registros.Facturacion
         private void CalcularTotal(Facturas factura)
         {
             Double total = 0;
-            foreach (var detalle in factura.ventas)
+            foreach (var detalle in factura.Productos)
             {
                 total += detalle.Total;
             }
@@ -97,12 +98,49 @@ namespace ProyectoFinal_Aplicada1.Registros.Facturacion
 
         private void AgregarProdbutton_Click(object sender, EventArgs e)
         {
-            factura.ventas.Add(new VentasProductos(ElegirProductocomboBox.Text, Utilidades.ToInt(CantidadArttextBox.Text), BLL.ProductosBLL.GetPrecio((int)ElegirProductocomboBox.SelectedValue)));
+            int id = (int)ElegirProductocomboBox.SelectedValue;
+            factura.Productos.Add(new Productos(id,ElegirProductocomboBox.Text, BLL.ProductosBLL.GetPrecio(id), Utilidades.ToInt(CantidadArttextBox.Text)));
             DetalledataGridView.DataSource = null;
-            DetalledataGridView.DataSource = factura.ventas;
+            DetalledataGridView.DataSource = factura.Productos;
             CalcularTotal(factura);
-            ProductostextBox.Text = factura.ventas.Count().ToString();
+            ProductostextBox.Text = factura.Productos.Count().ToString();
             TotaltextBox.Text = factura.Total.ToString();
+        }
+
+        private void BuscarFactbutton_Click(object sender, EventArgs e)
+        {
+            factura = BLL.FacturasBLL.Buscar(Utilidades.ToInt(FacturaIdtextBox.Text));
+           if(factura!=null)
+            {
+                ProductostextBox.Text = factura.Productos.Count().ToString();
+                TotaltextBox.Text = factura.Total.ToString();
+                DetalledataGridView.DataSource = null;
+                DetalledataGridView.DataSource = factura.Productos;
+            }
+        }
+
+        private void LimpiarCampos()
+        {
+            DetalledataGridView.DataSource = null;
+            CantidadArttextBox.Clear();
+            ProductostextBox.Clear();
+            TotaltextBox.Clear();
+            FechadateTimePicker.Value = DateTime.Today;
+            FacturaIdtextBox.Clear();
+            factura = new Facturas();
+        }
+
+        private void EliminarDetallebutton_Click(object sender, EventArgs e)
+        {
+            BLL.FacturasBLL.Eliminar(BLL.FacturasBLL.Buscar(Utilidades.ToInt(FacturaIdtextBox.Text)));
+            LimpiarCampos();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var reporte = new VentanasReportes.FacturaReporte();
+            reporte.FacturaId = Utilidades.ToInt(FacturaIdtextBox.Text);
+            reporte.Show();
         }
     }
 }

@@ -91,9 +91,9 @@ namespace BLL
                 {
                     lista = db.Vendedor.ToList();
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-
+                    MessageBox.Show(e.ToString());
                     throw;
                 }
                 return lista;

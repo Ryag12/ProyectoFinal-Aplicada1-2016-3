@@ -136,6 +136,12 @@
     </Compile>
     <Compile Include="Utilidades.cs" />
     <Compile Include="ValidacionLetrayNumero.cs" />
+    <Compile Include="VentanasReportes\FacturaReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasReportes\FacturaReporte.Designer.cs">
+      <DependentUpon>FacturaReporte.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Consultas\ConsultaProducto.resx">
       <DependentUpon>ConsultaProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,10 +181,15 @@
     <EmbeddedResource Include="Registros\VentanaReportes\Vendedores.resx">
       <DependentUpon>Vendedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ReporteVendedores.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteFactura.rdlc" />
+    <EmbeddedResource Include="VentanasReportes\FacturaReporte.resx">
+      <DependentUpon>FacturaReporte.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Entidades.Facturas.datasource" />
     <None Include="Properties\DataSources\Entidades.Productos.datasource" />
+    <None Include="Properties\DataSources\Entidades.Proveedores.datasource" />
     <None Include="Properties\DataSources\Entidades.TiposVehiculos.datasource" />
     <None Include="Properties\DataSources\Entidades.Usuarios.datasource" />
     <None Include="Properties\DataSources\Entidades.Vendedores.datasource" />

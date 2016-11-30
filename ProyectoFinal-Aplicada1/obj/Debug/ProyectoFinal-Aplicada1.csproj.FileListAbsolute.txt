@@ -71,3 +71,4 @@ C:\Users\YAVIER AMARANTE\Source\Repos\ProyectoFinal-Aplicada1-2016-34\ProyectoFi
 C:\Users\YAVIER AMARANTE\Source\Repos\ProyectoFinal-Aplicada1-2016-34\ProyectoFinal-Aplicada1\obj\Debug\RdlCompile.compiled
 C:\Users\YAVIER AMARANTE\Source\Repos\ProyectoFinal-Aplicada1-2016-34\ProyectoFinal-Aplicada1\obj\Debug\ProyectoFinal-Aplicada1.exe
 C:\Users\YAVIER AMARANTE\Source\Repos\ProyectoFinal-Aplicada1-2016-34\ProyectoFinal-Aplicada1\obj\Debug\ProyectoFinal-Aplicada1.pdb
+C:\Users\YAVIER AMARANTE\Source\Repos\ProyectoFinal-Aplicada1-2016-34\ProyectoFinal-Aplicada1\obj\Debug\ProyectoFinal_Aplicada1.VentanasReportes.FacturaReporte.resources

@@ -52,7 +52,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.BuscarFactbutton = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.FacturaIdtextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.EliminarDetallebutton = new System.Windows.Forms.Button();
@@ -148,6 +148,7 @@
             this.button2.TabIndex = 2;
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label8
             // 
@@ -289,7 +290,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.BuscarFactbutton);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.FacturaIdtextBox);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Location = new System.Drawing.Point(12, 105);
             this.groupBox3.Name = "groupBox3";
@@ -309,16 +310,17 @@
             this.BuscarFactbutton.Text = "Buscar";
             this.BuscarFactbutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BuscarFactbutton.UseVisualStyleBackColor = true;
+            this.BuscarFactbutton.Click += new System.EventHandler(this.BuscarFactbutton_Click);
             // 
-            // textBox4
+            // FacturaIdtextBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(109, 15);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(105, 32);
-            this.textBox4.TabIndex = 16;
+            this.FacturaIdtextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FacturaIdtextBox.ForeColor = System.Drawing.Color.Black;
+            this.FacturaIdtextBox.Location = new System.Drawing.Point(109, 15);
+            this.FacturaIdtextBox.Multiline = true;
+            this.FacturaIdtextBox.Name = "FacturaIdtextBox";
+            this.FacturaIdtextBox.Size = new System.Drawing.Size(105, 32);
+            this.FacturaIdtextBox.TabIndex = 16;
             // 
             // label4
             // 
@@ -352,6 +354,7 @@
             this.EliminarDetallebutton.Text = "Eliminar";
             this.EliminarDetallebutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.EliminarDetallebutton.UseVisualStyleBackColor = true;
+            this.EliminarDetallebutton.Click += new System.EventHandler(this.EliminarDetallebutton_Click);
             // 
             // GuardarDetallebutton
             // 
@@ -439,7 +442,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button BuscarFactbutton;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox FacturaIdtextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button EliminarDetallebutton;

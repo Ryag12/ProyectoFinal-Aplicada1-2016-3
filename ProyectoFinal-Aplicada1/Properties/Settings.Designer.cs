@@ -33,5 +33,15 @@ namespace ProyectoFinal_Aplicada1.Properties {
                 return ((string)(this["ConStr"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Aplicada1-ProyectoFinal\ProyectoFinal-Aplicada1\ProyectoFinal-Aplicada1\DataBase\ProyectoFinalDb.mdf"";Integrated Security=True;Connect Timeout=30")]
+        public string StrCon {
+            get {
+                return ((string)(this["StrCon"]));
+            }
+        }
     }
 }
