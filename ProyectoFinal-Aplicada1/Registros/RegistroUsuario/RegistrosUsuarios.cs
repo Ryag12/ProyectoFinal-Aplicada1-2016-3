@@ -123,14 +123,21 @@ namespace ProyectoFinal_Aplicada1.Registros.RegistroUsuario
 
         private void BuscarUsbutton_Click(object sender, EventArgs e)
         {
-            int num = Convert.ToInt32(UsuarioIdtextBox.Text);
-            var uS = UsuariosBLL.Buscar(num);
-
-            if(uS != null)
+            var vendedor = UsuariosBLL.Buscar(Convert.ToInt32(UsuarioIdtextBox.Text));         
+            if(vendedor != null)
             {
-                NombreUsuariotextBox.Text = uS.Nombre;
-                ContrasenatextBox.Text = uS.Contrasena;
+                NombreUsuariotextBox.Text = vendedor.Nombre;
+                ContrasenatextBox.Text = vendedor.Contrasena;
+                CargarUsuarios(vendedor);
             }
+        }
+          
+
+        private void CargarUsuarios(Usuarios us)
+        {
+            NombreUsuariotextBox.Text = us.Nombre;
+            ContrasenatextBox.Text = us.Contrasena;
+            
         }
     }
     

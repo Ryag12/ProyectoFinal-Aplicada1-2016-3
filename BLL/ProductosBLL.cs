@@ -36,7 +36,7 @@ namespace BLL
                 }
                 return obtener;
             }
-           
+
         }
 
         public static void Eliminar(Productos productos)
@@ -85,15 +85,15 @@ namespace BLL
         {
             List<Productos> lista = new List<Productos>();
 
-            using (var conexion =new  ProyectoFinalDb())
+            using (var conexion = new ProyectoFinalDb())
             {
                 try
                 {
                     lista = conexion.Producto.ToList();
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-
+                    MessageBox.Show(e.ToString());
                     throw;
                 }
                 return lista;
@@ -119,5 +119,24 @@ namespace BLL
 
             return lista;
         }
+        public static Double GetPrecio(int productoId)
+        {
+            Double precio = 0;
+            using (var conexion = new ProyectoFinalDb())
+            {
+                try
+                {
+                    Productos p = conexion.Producto.Where(prod => prod.productoId == productoId).FirstOrDefault();
+                    precio = p.Precio;
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.ToString());
+                    throw;
+                }
+                return precio;
+            }
+        }
+
     }
 }

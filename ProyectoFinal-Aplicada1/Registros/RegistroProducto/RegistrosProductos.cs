@@ -83,14 +83,21 @@ namespace ProyectoFinal_Aplicada1.RegistroProducto
             Productos producto = new Productos();
 
             producto = LLenarFormulario();
-            if(CompletarProducto() != null)
+            if(producto != null)
             {
-                MessageBox.Show("Todos los campos deben estar lleno");
+                if (BLL.ProductosBLL.Insertar(producto))
+                {
+                    MessageBox.Show("EL producto se agrego exitosamente");
+                }
             }
-            else if(ProductosBLL.Insertar(producto))
-            {
-                MessageBox.Show("EL producto se agrego exitosamente");
-            }
+            //if(CompletarProducto() != null)
+            //{
+            //    MessageBox.Show("Todos los campos deben estar lleno");
+            //}
+            //else if(ProductosBLL.Insertar(producto))
+            //{
+            //    MessageBox.Show("EL producto se agrego exitosamente");
+            //}
         }
 
         public Productos CompletarProducto()
@@ -111,6 +118,7 @@ namespace ProyectoFinal_Aplicada1.RegistroProducto
                     pr.Descripcion = DescripcionProtextBox.Text;
                     pr.Direccion = DireccionProductotextBox.Text;
                     pr.Pais = PaisProductotextBox.Text;
+                    pr.productoId = 0;
                 }
                 else
                 {
@@ -165,6 +173,7 @@ namespace ProyectoFinal_Aplicada1.RegistroProducto
             Prod.Descripcion = DescripcionProtextBox.Text;
             Prod.Direccion = DireccionProductotextBox.Text;
             Prod.Pais = PaisProductotextBox.Text;
+            Prod.productoId = 0;
             return Prod;
 
         }

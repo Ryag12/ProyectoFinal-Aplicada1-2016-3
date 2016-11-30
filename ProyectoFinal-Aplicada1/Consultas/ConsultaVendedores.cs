@@ -15,9 +15,10 @@ namespace ProyectoFinal_Aplicada1.Consultar
         public ConsultaVendedores()
         {
             InitializeComponent();
-            DesdedateTimePicker.Value = HastadateTimePicker.Value = DateTime.Now;
+            
         }
-        
+        public List<Vendedores> lista = new List<Vendedores>();
+
         private void ConsultaVendedores_Load(object sender, EventArgs e)
         {
 
@@ -43,8 +44,14 @@ namespace ProyectoFinal_Aplicada1.Consultar
         }
         private void BuscarConsultabutton_Click(object sender, EventArgs e)
         {
-            var lista = BLL.VendedorBLL.GetLista(Convert.ToInt32(FiltrarVendedorcomboBox.Text));
-            TblConsudataGridView.DataSource = null;
+            if (!string.IsNullOrEmpty(FiltrarVendedorcomboBox.Text))
+            {
+                lista = BLL.VendedorBLL.GetLista(Utilidades.ToInt(FiltrarVendedorcomboBox.Text));
+            }
+            else
+            {
+                lista = BLL.VendedorBLL.GetLista();
+            }
             TblConsudataGridView.DataSource = lista;
         }
         private void TblConsudataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

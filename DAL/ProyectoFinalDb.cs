@@ -21,7 +21,22 @@ namespace DAL
 
         public virtual DbSet<TiposVehiculos> TiposVehiculos { get; set; }
 
-        public virtual DbSet<Proveedores> Proveedores { get; set; }
+        public virtual DbSet<Proveedores> Proveedore { get; set; }
 
+        public virtual DbSet<Facturas> Factura { get; set; }
+
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Facturas>()
+                .HasMany<VentasProductos>(f => f.ventas)
+                .WithMany(v => v.Facturas)
+                .Map(DF =>
+                {
+                    DF.MapLeftKey("FacturaId");
+                    DF.MapRightKey("VentaProductoId");
+                    DF.ToTable("DetalleFacturas");
+                });
+        }
     }
 }

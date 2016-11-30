@@ -26,9 +26,9 @@ C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Apli
 C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Aplicada1-ProyectoFinal\ProyectoFinal-Aplicada1\ProyectoFinal-Aplicada1\obj\Debug\ProyectoFinal-Aplicada1.csproj.GenerateResource.Cache
 C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Aplicada1-ProyectoFinal\ProyectoFinal-Aplicada1\ProyectoFinal-Aplicada1\obj\Debug\ProyectoFinal-Aplicada1.exe
 C:\Users\YAVIER AMARANTE\OneDrive\7mo Semestre Ucne\Programacion Aplicada 1\Aplicada1-ProyectoFinal\ProyectoFinal-Aplicada1\ProyectoFinal-Aplicada1\obj\Debug\ProyectoFinal-Aplicada1.pdb
+C:\Users\YAVIER AMARANTE\Source\Repos\ProyectoFinal-Aplicada1-2016-34\ProyectoFinal-Aplicada1\bin\Debug\DataBase\ProyectoFinalDb.mdf
 C:\Users\YAVIER AMARANTE\Source\Repos\ProyectoFinal-Aplicada1-2016-34\ProyectoFinal-Aplicada1\bin\Debug\DataBase\ProyectoFinalDb_log.ldf
 C:\Users\YAVIER AMARANTE\Source\Repos\ProyectoFinal-Aplicada1-2016-34\ProyectoFinal-Aplicada1\bin\Debug\ProyectoFinal-Aplicada1.exe.config
-C:\Users\YAVIER AMARANTE\Source\Repos\ProyectoFinal-Aplicada1-2016-34\ProyectoFinal-Aplicada1\bin\Debug\DataBase\ProyectoFinalDb.mdf
 C:\Users\YAVIER AMARANTE\Source\Repos\ProyectoFinal-Aplicada1-2016-34\ProyectoFinal-Aplicada1\bin\Debug\ProyectoFinal-Aplicada1.exe
 C:\Users\YAVIER AMARANTE\Source\Repos\ProyectoFinal-Aplicada1-2016-34\ProyectoFinal-Aplicada1\bin\Debug\ProyectoFinal-Aplicada1.pdb
 C:\Users\YAVIER AMARANTE\Source\Repos\ProyectoFinal-Aplicada1-2016-34\ProyectoFinal-Aplicada1\bin\Debug\BLL.dll

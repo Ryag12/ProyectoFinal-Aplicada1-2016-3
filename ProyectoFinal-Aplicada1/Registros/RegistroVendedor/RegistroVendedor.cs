@@ -54,7 +54,7 @@ namespace ProyectoFinal_Aplicada1.RegistroVendedor
             }
         }
 
-        private bool Confirmar()
+        private Boolean Confirmar()
         {
             bool error = true;
             //NombreVendedortextBox.Text ==string.Empty
@@ -66,12 +66,12 @@ namespace ProyectoFinal_Aplicada1.RegistroVendedor
 
                 errorProvider1.SetError(NombreVendedortextBox, "Debes al menos introducir un nombre");
                 errorProvider2.SetError(ApellidotextBox, "Introducir al menos un apellido");
-
                 errorProvider4.SetError(CedulamaskedTextBox, "Complete el campo Cedula ");
                 errorProvider5.SetError(TelefonoFijomaskedTextBox, "Introduzca un numero del telefono ");
                 errorProvider6.SetError(DirecciontextBox, "Debe colocar una direccion");
                 errorProvider7.SetError(ZonatextBox, "Para continuar coloque la zona del vendedor");
-                error = false;
+                error = true;
+                
             }
             return error;
         }

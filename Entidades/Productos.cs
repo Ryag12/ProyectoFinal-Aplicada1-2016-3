@@ -26,9 +26,10 @@ namespace Entidades
 
         public string Direccion { get; set; }
 
+        public virtual List<Facturas> Facturas { get; set; }
         public Productos()
         {
-
+            this.Facturas = new List<Entidades.Facturas>();
         }
 
         public Productos(int productoId, string nombre, string descripcion, int precio, int unidad,string marca,string telefono,string pais,string direccion)
@@ -42,6 +43,7 @@ namespace Entidades
             this.Telefono = telefono;
             this.Pais = pais;
             this.Direccion = direccion;
+            this.Facturas = new List<Entidades.Facturas>();
         }
     }
 }

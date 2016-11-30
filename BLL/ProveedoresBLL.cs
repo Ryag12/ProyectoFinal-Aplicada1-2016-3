@@ -18,7 +18,7 @@ namespace BLL
             {
                 try
                 {
-                    conexion.Proveedores.Add(proveedor);
+                    conexion.Proveedore.Add(proveedor);
                     conexion.SaveChanges();
                     resultado = true;
                 }
@@ -39,7 +39,7 @@ namespace BLL
             {
                 try
                 {
-                    lista = conexion.Proveedores.ToList();
+                    lista = conexion.Proveedore.ToList();
                 }
                 catch (Exception e)
                 {

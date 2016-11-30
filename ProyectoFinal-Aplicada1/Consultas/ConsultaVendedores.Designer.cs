@@ -39,11 +39,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.FiltrarVendedorcomboBox = new System.Windows.Forms.ComboBox();
             this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Editarbutton = new System.Windows.Forms.Button();
+            this.Guardarbutton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TblConsudataGridView)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // TblConsudataGridView
             // 
+            this.TblConsudataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -72,7 +78,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.TblConsudataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.TblConsudataGridView.RowTemplate.Height = 24;
-            this.TblConsudataGridView.Size = new System.Drawing.Size(1100, 316);
+            this.TblConsudataGridView.Size = new System.Drawing.Size(1084, 316);
             this.TblConsudataGridView.TabIndex = 0;
             this.TblConsudataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TblConsudataGridView_CellContentClick);
             // 
@@ -136,13 +142,71 @@
             this.HastadateTimePicker.Size = new System.Drawing.Size(425, 34);
             this.HastadateTimePicker.TabIndex = 8;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.Editarbutton);
+            this.panel2.Controls.Add(this.Guardarbutton);
+            this.panel2.Location = new System.Drawing.Point(116, 558);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(867, 115);
+            this.panel2.TabIndex = 13;
+            // 
+            // Editarbutton
+            // 
+            this.Editarbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Editarbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Editarbutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Editarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Editarbutton.Image")));
+            this.Editarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Editarbutton.Location = new System.Drawing.Point(21, 16);
+            this.Editarbutton.Name = "Editarbutton";
+            this.Editarbutton.Size = new System.Drawing.Size(172, 72);
+            this.Editarbutton.TabIndex = 15;
+            this.Editarbutton.Text = "Nuevo";
+            this.Editarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Editarbutton.UseVisualStyleBackColor = false;
+            // 
+            // Guardarbutton
+            // 
+            this.Guardarbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Guardarbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Guardarbutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Guardarbutton.Location = new System.Drawing.Point(288, 16);
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.Size = new System.Drawing.Size(186, 72);
+            this.Guardarbutton.TabIndex = 12;
+            this.Guardarbutton.Text = "Modificar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Guardarbutton.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(590, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(186, 72);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Eliminar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // ConsultaVendedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1128, 541);
+            this.ClientSize = new System.Drawing.Size(1107, 703);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.HastadateTimePicker);
             this.Controls.Add(this.FiltrarVendedorcomboBox);
             this.Controls.Add(this.label2);
@@ -154,6 +218,7 @@
             this.Text = "ConsultaVendedores";
             this.Load += new System.EventHandler(this.ConsultaVendedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TblConsudataGridView)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +233,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox FiltrarVendedorcomboBox;
         private System.Windows.Forms.DateTimePicker HastadateTimePicker;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Editarbutton;
+        private System.Windows.Forms.Button Guardarbutton;
     }
 }
