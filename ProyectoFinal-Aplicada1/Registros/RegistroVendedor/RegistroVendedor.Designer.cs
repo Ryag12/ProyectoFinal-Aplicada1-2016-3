@@ -65,45 +65,23 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider7 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider9 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider10 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider11 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider12 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider13 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.Editarbutton = new System.Windows.Forms.Button();
+            this.ErrorVenderrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Nombrelabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.VehiculoAsignado.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider13)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorVenderrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.Nombrelabel);
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.VehiculoAsignado);
             this.panel1.Controls.Add(this.groupBox1);
@@ -492,58 +470,6 @@
             this.Eliminarbutton.UseVisualStyleBackColor = false;
             this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
-            // 
-            // errorProvider3
-            // 
-            this.errorProvider3.ContainerControl = this;
-            // 
-            // errorProvider4
-            // 
-            this.errorProvider4.ContainerControl = this;
-            // 
-            // errorProvider5
-            // 
-            this.errorProvider5.ContainerControl = this;
-            // 
-            // errorProvider6
-            // 
-            this.errorProvider6.ContainerControl = this;
-            // 
-            // errorProvider7
-            // 
-            this.errorProvider7.ContainerControl = this;
-            // 
-            // errorProvider8
-            // 
-            this.errorProvider8.ContainerControl = this;
-            // 
-            // errorProvider9
-            // 
-            this.errorProvider9.ContainerControl = this;
-            // 
-            // errorProvider10
-            // 
-            this.errorProvider10.ContainerControl = this;
-            // 
-            // errorProvider11
-            // 
-            this.errorProvider11.ContainerControl = this;
-            // 
-            // errorProvider12
-            // 
-            this.errorProvider12.ContainerControl = this;
-            // 
-            // errorProvider13
-            // 
-            this.errorProvider13.ContainerControl = this;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
@@ -572,13 +498,25 @@
             this.Editarbutton.UseVisualStyleBackColor = false;
             this.Editarbutton.Click += new System.EventHandler(this.Editarbutton_Click);
             // 
+            // ErrorVenderrorProvider
+            // 
+            this.ErrorVenderrorProvider.ContainerControl = this;
+            // 
+            // Nombrelabel
+            // 
+            this.Nombrelabel.AutoSize = true;
+            this.Nombrelabel.Location = new System.Drawing.Point(318, 108);
+            this.Nombrelabel.Name = "Nombrelabel";
+            this.Nombrelabel.Size = new System.Drawing.Size(0, 23);
+            this.Nombrelabel.TabIndex = 45;
+            // 
             // RegistroVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(930, 872);
+            this.ClientSize = new System.Drawing.Size(930, 847);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -594,20 +532,8 @@
             this.VehiculoAsignado.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider13)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorVenderrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -637,19 +563,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.ErrorProvider errorProvider2;
-        private System.Windows.Forms.ErrorProvider errorProvider3;
-        private System.Windows.Forms.ErrorProvider errorProvider4;
-        private System.Windows.Forms.ErrorProvider errorProvider5;
-        private System.Windows.Forms.ErrorProvider errorProvider6;
-        private System.Windows.Forms.ErrorProvider errorProvider7;
-        private System.Windows.Forms.ErrorProvider errorProvider8;
-        private System.Windows.Forms.ErrorProvider errorProvider9;
-        private System.Windows.Forms.ErrorProvider errorProvider10;
-        private System.Windows.Forms.ErrorProvider errorProvider11;
-        private System.Windows.Forms.ErrorProvider errorProvider12;
-        private System.Windows.Forms.ErrorProvider errorProvider13;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button Editarbutton;
         private System.Windows.Forms.Label label2;
@@ -664,5 +577,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox VehiculoAsignado;
+        private System.Windows.Forms.ErrorProvider ErrorVenderrorProvider;
+        private System.Windows.Forms.Label Nombrelabel;
     }
 }

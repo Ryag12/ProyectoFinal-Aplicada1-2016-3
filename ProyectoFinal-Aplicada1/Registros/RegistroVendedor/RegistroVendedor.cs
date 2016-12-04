@@ -19,6 +19,8 @@ namespace ProyectoFinal_Aplicada1.RegistroVendedor
             InitializeComponent();
             LlenaCombobox();
             tv = new List<TiposVehiculos>();
+
+            Nombrelabel.Visible = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -44,7 +46,7 @@ namespace ProyectoFinal_Aplicada1.RegistroVendedor
 
             if (!Confirmar())
             {
-                MessageBox.Show("Todos los campos deben estar llenos");
+                //MessageBox.Show("Todos los campos deben estar llenos");
 
             }
             else if (VendedorBLL.Guardar(vendedores))
@@ -54,26 +56,115 @@ namespace ProyectoFinal_Aplicada1.RegistroVendedor
             }
         }
 
-        private Boolean Confirmar()
+        private bool Confirmar()
         {
-            bool error = true;
-            //NombreVendedortextBox.Text ==string.Empty
-            if (string.IsNullOrEmpty(NombreVendedortextBox.Text) && (string.IsNullOrEmpty(ApellidotextBox.Text)) &&
-                (string.IsNullOrEmpty(CedulamaskedTextBox.Text)) && (string.IsNullOrEmpty(TelefonoFijomaskedTextBox.Text)) && (string.IsNullOrEmpty(DirecciontextBox.Text)) &&
-                (string.IsNullOrEmpty(ZonatextBox.Text)) && (string.IsNullOrEmpty(TipoVehiculocomboBox.Text)) && (string.IsNullOrEmpty(DescripciontextBox.Text)) &&
-                (string.IsNullOrEmpty(RutaAsignadatextBox.Text)))
-            {
+            bool retornar = true;
 
-                errorProvider1.SetError(NombreVendedortextBox, "Debes al menos introducir un nombre");
-                errorProvider2.SetError(ApellidotextBox, "Introducir al menos un apellido");
-                errorProvider4.SetError(CedulamaskedTextBox, "Complete el campo Cedula ");
-                errorProvider5.SetError(TelefonoFijomaskedTextBox, "Introduzca un numero del telefono ");
-                errorProvider6.SetError(DirecciontextBox, "Debe colocar una direccion");
-                errorProvider7.SetError(ZonatextBox, "Para continuar coloque la zona del vendedor");
-                error = true;
-                
+            if (string.IsNullOrEmpty(NombreVendedortextBox.Text))
+            {
+                string texto;
+                texto = "Introduzca nombre...";
+                ErrorVenderrorProvider.SetError(NombreVendedortextBox, texto);
+                MessageBox.Show(texto);
+                NombreVendedortextBox.Focus();
+                ApellidotextBox.Focus();
+                retornar = false;
             }
-            return error;
+            else
+                ErrorVenderrorProvider.Clear();
+
+
+            if (string.IsNullOrEmpty(ApellidotextBox.Text))
+            {
+                string texto;
+                texto = "Introduzca Apellido..";
+                ErrorVenderrorProvider.SetError(ApellidotextBox, texto);
+                MessageBox.Show(texto);
+                ApellidotextBox.Focus();
+                retornar = false;
+            }
+            else
+                ErrorVenderrorProvider.Clear();
+            //if (!HombreradioButton.Checked == true ||! MujerradioButton.Checked == true)
+            //{
+            //    MessageBox.Show("Al menos seleccione el sexo....!!!");
+            //    retornar = true;
+            //}
+            //else
+
+
+            if (!CedulamaskedTextBox.MaskFull)
+            {
+                string texto;
+                texto = "Introduzca Cedula...";
+                ErrorVenderrorProvider.SetError(CedulamaskedTextBox, texto);
+                MessageBox.Show(texto);
+                CedulamaskedTextBox.Focus();
+                retornar = false;
+            }
+            else
+                ErrorVenderrorProvider.Clear();
+
+            if (!TelefonoFijomaskedTextBox.MaskFull)
+            {
+                string texto;
+                texto = "Introduzca un Telefono...";
+                ErrorVenderrorProvider.SetError(TelefonoFijomaskedTextBox, texto);
+                ErrorVenderrorProvider.SetError(TelefonoMovilmaskedTextBox, texto);
+                MessageBox.Show(texto);
+                TelefonoFijomaskedTextBox.Focus();
+                retornar = false;
+            }
+            else
+                ErrorVenderrorProvider.Clear();
+
+            if (string.IsNullOrEmpty(DescripciontextBox.Text))
+            {
+                string texto;
+                texto = "Introduzca Descripcion del Vehiculo..";
+                ErrorVenderrorProvider.SetError(DescripciontextBox, texto);
+                MessageBox.Show(texto);
+                DescripciontextBox.Focus();
+                retornar = false;
+            }
+            else
+                ErrorVenderrorProvider.Clear();
+
+            if (string.IsNullOrEmpty(RutaAsignadatextBox.Text))
+            {
+                string texto;
+                texto = "Introduzca la Ruta Asignada..";
+                ErrorVenderrorProvider.SetError(RutaAsignadatextBox, texto);
+                MessageBox.Show(texto);
+                RutaAsignadatextBox.Focus();
+                retornar = false;
+            }
+            else
+                ErrorVenderrorProvider.Clear();
+            if (string.IsNullOrEmpty(DirecciontextBox.Text))
+            {
+                string texto;
+                texto = "Introduzca una Direccion..";
+                ErrorVenderrorProvider.SetError(DirecciontextBox, texto);
+                MessageBox.Show(texto);
+                DirecciontextBox.Focus();
+                retornar = false;
+            }
+            else
+                ErrorVenderrorProvider.Clear();
+            if (string.IsNullOrEmpty(ZonatextBox.Text))
+            {
+                string texto;
+                texto = "Introduzca la Ruta Asignada..";
+                ErrorVenderrorProvider.SetError(ZonatextBox, texto);
+                MessageBox.Show(texto);
+                ZonatextBox.Focus();
+                retornar = false;
+            }
+            else
+                ErrorVenderrorProvider.Clear();
+            return retornar;
+
         }
 
         private void Limpiar()
@@ -95,6 +186,7 @@ namespace ProyectoFinal_Aplicada1.RegistroVendedor
             DescripciontextBox.Clear();
             RutaAsignadatextBox.Clear();
             TipoVehiculocomboBox.SelectedValue = 1;
+            ErrorVenderrorProvider.Clear();
 
         }
 

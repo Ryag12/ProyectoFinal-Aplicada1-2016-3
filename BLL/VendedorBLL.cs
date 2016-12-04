@@ -101,15 +101,25 @@ namespace BLL
 
         }
 
-        public static List<Vendedores> GetLista(int vendedorId)
+        public static List<Vendedores> GetListaId(int vendedorId)
         {
             List<Vendedores> lista = new List<Vendedores>();
 
-            var db = new ProyectoFinalDb();
+            using (var db = new ProyectoFinalDb())
+            {
+                try
+                {
+                    lista = db.Vendedor.Where(p => p.VendedorId == vendedorId).ToList();
+                }
+                catch (Exception)
+                {
 
-            lista = db.Vendedor.Where(p => p.VendedorId == vendedorId).ToList();
+                    throw;
+                }
+                return lista;
+            }                
 
-            return lista;
+          
         }
         public static List<Vendedores> GetListNombre(string nombre)
         {
